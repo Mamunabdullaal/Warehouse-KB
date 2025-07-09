@@ -52,6 +52,25 @@
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
         }
+        /* Custom styles for emphasis */
+        .important-point {
+            color: #dc2626; /* Red-700 */
+            font-weight: bold;
+        }
+        .action-point {
+            color: #16a34a; /* Green-700 */
+            font-weight: bold;
+        }
+        .highlight-bg {
+            background-color: #fefce8; /* Yellow-50 */
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .sub-heading {
+            color: #4338ca; /* Indigo-700 */
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -148,13 +167,13 @@
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
                         <li><strong>Step 1: Is the Warehouse Proof Good Enough?</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Choose "Yes" if:</strong>
+                                <li><span class="action-point">Choose "Yes" if:</span>
                                     <ul class="list-square pl-5">
                                         <li>The video clearly shows the item being unpacked.</li>
                                         <li>OR, the warehouse sent photos (no video), and the photos clearly show the returned item(s).</li>
                                     </ul>
                                 </li>
-                                <li><strong>Choose "No" if:</strong>
+                                <li><span class="important-point">Choose "No" if:</span>
                                     <ul class="list-square pl-5">
                                         <li>The warehouse sent no video or photos.</li>
                                         <li>OR, photos were sent (no video), but they don't clearly show the item(s).</li>
@@ -162,24 +181,31 @@
                                         <li>OR, the camera angle is wrong, or the person is doing things out of view.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Important:</strong> If you choose "No," do not go to Step 2.</li>
+                                <li><span class="important-point">Important:</span> If you choose "No," do not go to Step 2.</li>
                             </ul>
                         </li>
                         <li><strong>Step 2: Check How Many Items the Warehouse Received.</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> Look at the video and write down how many items the warehouse got.</li>
-                                <li>Count items that are clearly seen or seem to be returned in the video.</li>
+                                <li><span class="action-point">Action:</span> Look at the video and write down how many items the warehouse got.</li>
+                                <li>Items clearly shown or suspected to be returned in the video are both counted as returned.</li>
                                 <li>If no unpacking is shown, but the box is big enough for the item(s), count them as returned.</li>
                             </ul>
                         </li>
                         <li><strong>Step 3: Confirm Item Count.</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> Make sure you have finished counting and checking the items.</li>
+                                <li><span class="action-point">Action:</span> Make sure you have finished counting and checking the items.</li>
                             </ul>
                         </li>
                         <li><strong>Step 4: Add a Note and Finish.</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Suggested Notes:</strong> "Video not valid," "Video valid, Item(s) checked," "Video valid, Item(s) could not be checked," "Video valid, item not found."</li>
+                                <li><span class="sub-heading">Suggested Notes:</span>
+                                    <ul class="list-square pl-5">
+                                        <li>"Invalid video."</li>
+                                        <li>"Valid video, Item(s) verified."</li>
+                                        <li>"Valid video, Item(s) unable to be verified."</li>
+                                        <li>"Valid video, item unable to be found."</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -212,24 +238,31 @@
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
                         <li><strong>Step 1: Is Warehouse Evidence Valid?</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Yes:</strong> If video clearly shows unpacking, OR warehouse provided clear photos of items without video.</li>
-                                <li><strong>No:</strong> If no video/photos, or photos are unclear, or it's impossible to tell if items belong to user, or camera angle is bad.</li>
-                                <li><strong>Action:</strong> If "No," stop here.</li>
+                                <li><span class="action-point">Yes:</span> If video clearly shows unpacking, OR warehouse provided clear photos of items without video.</li>
+                                <li><span class="important-point">No:</span> If no video/photos, or photos are unclear, or it's impossible to tell if items belong to user, or camera angle is bad.</li>
+                                <li><span class="important-point">Action:</span> If "No," stop here.</li>
                             </ul>
                         </li>
                         <li><strong>Step 2: Verify Item Count in Video.</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> Customer service must count items seen in the video. Even suspected returned items count. If no unpacking video, but the box size fits the items, count them as returned.</li>
+                                <li><span class="action-point">Action:</span> Customer service must count items seen in the video. Even suspected returned items count. If no unpacking video, but the box size fits the items, count them as returned.</li>
                             </ul>
                         </li>
                         <li><strong>Step 3: Confirm Items Received.</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> Customer service must confirm completion of item count verification.</li>
+                                <li><span class="action-point">Action:</span> Customer service must confirm completion of item count verification.</li>
                             </ul>
                         </li>
                         <li><strong>Step 4: Add Remark & Submit.</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Recommended Remarks:</strong> "Invalid video," "Valid video, Item(s) verified," "Valid video, Item(s) unable to be verified," "Valid video, item unable to be found."</li>
+                                <li><span class="sub-heading">Recommended Remarks:</span>
+                                    <ul class="list-square pl-5">
+                                        <li>"Invalid video."</li>
+                                        <li>"Valid video, Item(s) verified."</li>
+                                        <li>"Valid video, Item(s) unable to be verified."</li>
+                                        <li>"Valid video, item unable to be found."</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -248,29 +281,29 @@
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
                         <li><strong>Step 1: Labels from the Same Package?</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> If NOT from the same package (e.g., shipping label on bag, package label on box), select "Not uploaded."</li>
-                                <li><strong>Action:</strong> If from the same package or unsure, go to Step 2.</li>
+                                <li><span class="action-point">Action:</span> If NOT from the same package (e.g., shipping label on bag, package label on box), select "Not uploaded."</li>
+                                <li><span class="action-point">Action:</span> If from the same package or unsure, go to Step 2.</li>
                             </ul>
                         </li>
                         <li><strong>Step 2: Is Logistics Tracking Number Correct?</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> Check shipping label photo against the tracking number.</li>
-                                <li><strong>Mismatched/Fake:</strong> If they don't match, or photo is clearly fake/edited, select "Not uploaded" for both labels.</li>
-                                <li><strong>Match:</strong> Select "Yes."</li>
-                                <li><strong>Unclear:</strong> If shipping label photo is unclear, select "Not uploaded" for shipping label.</li>
+                                <li><span class="action-point">Action:</span> Check shipping label photo against the tracking number.</li>
+                                <li><span class="important-point">Mismatched/Fake:</span> If they don't match, or photo is clearly fake/edited, select "Not uploaded" for both labels.</li>
+                                <li><span class="action-point">Match:</span> Select "Yes."</li>
+                                <li><span class="important-point">Unclear:</span> If shipping label photo is unclear, select "Not uploaded" for shipping label.</li>
                             </ul>
                         </li>
                         <li><strong>Step 3: Is Package Number Correct?</strong>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> Check package label photo against the package number and "packing time" (time on label should match packing time, usually same day).</li>
-                                <li><strong>Consistent (Label & Time):</strong> Select "Yes."</li>
-                                <li><strong>Label OK, Time Different:</strong> Select "Not uploaded."</li>
-                                <li><strong>Label & Time Inconsistent (No Editing):</strong> Select "No."</li>
-                                <li><strong>Unclear:</strong> If package label photo is unclear, select "Not uploaded."</li>
-                                <li><strong>Incomplete Label, Visible Part Doesn't Match, Time Consistent:</strong> Select "No."</li>
-                                <li><strong>Incomplete Label, Cannot Confirm Match:</strong> Select "Not uploaded."</li>
-                                <li><strong>Fake Package Label:</strong> Select "Not uploaded" for both, note "Evidence appears to be fraudulent."</li>
-                                <li><strong>Note:</strong> If shipping label covers package label's time, you can ignore checking packing time.</li>
+                                <li><span class="action-point">Action:</span> Check package label photo against the package number and "packing time" (time on label should match packing time, usually same day).</li>
+                                <li><span class="action-point">Consistent (Label & Time):</span> Select "Yes."</li>
+                                <li><span class="important-point">Label OK, Time Different:</span> Select "Not uploaded."</li>
+                                <li><span class="important-point">Label & Time Inconsistent (No Editing):</span> Select "No."</li>
+                                <li><span class="important-point">Unclear:</span> If package label photo is unclear, select "Not uploaded."</li>
+                                <li><span class="important-point">Incomplete Label, Visible Part Doesn't Match, Time Consistent:</span> Select "No."</li>
+                                <li><span class="important-point">Incomplete Label, Cannot Confirm Match:</span> Select "Not uploaded."</li>
+                                <li><span class="important-point">Fake Package Label:</span> Select "Not uploaded" for both, note "Evidence appears to be fraudulent."</li>
+                                <li><span class="sub-heading">Note:</span> If shipping label covers package label's time, you can ignore checking packing time.</li>
                             </ul>
                         </li>
                     </ul>
@@ -285,31 +318,59 @@
                 <section id="local-merchant-appeals" class="mb-10 p-6 border-b border-gray-200 section-anchor">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">3. Local Merchants: Second Review of Merchant Appeal for Allegedly Missing Items in Returned Goods</h3>
                     <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To re-evaluate appeals from local merchants claiming items are missing from returned goods. This ensures fair resolution in disputes.</p>
-                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps (Conceptual):</h4>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps for Reviewing Appeals:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>Appeal Intake:</strong> Logging the merchant's appeal and gathering all submitted evidence.</li>
-                        <li><strong>Initial Data Review:</strong> Comparing merchant claims with return records.</li>
-                        <li><strong>Evidence Evaluation:</strong> Critically assessing photos, videos, or other documents provided by the merchant.</li>
-                        <li><strong>Internal Verification:</strong> Checking warehouse records or conducting physical checks if necessary.</li>
-                        <li><strong>Decision & Communication:</strong> Making a final decision on the appeal and informing the merchant.</li>
+                        <li><span class="sub-heading">Step 1: Get the Appeal Details:</span>
+                            <ul class="list-circle pl-5">
+                                <li>Record the merchant's appeal.</li>
+                                <li>Collect all proof they sent (like photos or videos).</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 2: Check Initial Information:</span>
+                            <ul class="list-circle pl-5">
+                                <li>Compare what the merchant says with our return records.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 3: Look at the Proof Carefully:</span>
+                            <ul class="list-circle pl-5">
+                                <li>Examine all photos, videos, or documents the merchant provided.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 4: Verify Internally (if needed):</span>
+                            <ul class="list-circle pl-5">
+                                <li>Check our warehouse records.</li>
+                                <li>Do a physical check if necessary.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 5: Make a Decision and Tell the Merchant:</span>
+                            <ul class="list-circle pl-5">
+                                <li>Decide on the appeal.</li>
+                                <li>Inform the merchant about the final decision.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </section>
 
                 <!-- Rule Section: Merchant Rejection Reasons -->
                 <section id="merchant-rejection-reasons" class="mb-10 p-6 border-b border-gray-200 section-anchor">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">6. Merchant Rejection Reasons (Local Merchants)</h3>
-                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> Defines valid reasons for merchants to reject returns.</p>
-                    <h4 class="text-xl font-medium text-gray-800 mb-2">Rejection Reasons:</h4>
+                    <p class="text-gray-700 mb-4">This section explains why merchants can refuse a return.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Valid Reasons for Rejection:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>Returned Item Does Not Match:</strong>
+                        <li><span class="sub-heading">Reason 1: Returned Item Does Not Match</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Reason:</strong> User returned an item different from what was sold/sent.</li>
-                                <li><strong>CS Action:</strong> Check order details, user's request, and evidence. If user received mismatched/damaged/quality-issue item, support the user.</li>
+                                <li><span class="important-point">What it means:</span> The customer sent back an item that is different from what was originally sold or sent to them.</li>
+                                <li><span class="action-point">Your Action (Customer Service):</span>
+                                    <ul class="list-square pl-5">
+                                        <li>Check the order details, what the customer asked for, and any proof (evidence).</li>
+                                        <li>If the customer received a wrong, damaged, or faulty item from us, then you should support the customer.</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li><strong>Returned Item Damaged:</strong>
+                        <li><span class="sub-heading">Reason 2: Returned Item Damaged</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Reason:</strong> User returned an item that is damaged, worn, or cannot be resold.</li>
+                                <li><span class="important-point">What it means:</span> The customer sent back an item that is damaged, looks used, or cannot be sold again.</li>
                             </ul>
                         </li>
                     </ul>
@@ -318,164 +379,166 @@
                 <!-- Rule Section: General Processing Steps & Proof Standards -->
                 <section id="general-processing-proof" class="mb-10 p-6 border-b border-gray-200 section-anchor">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">7. General Processing Steps & Proof Standards (Local Merchants)</h3>
-                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> Guides customer service through the annotation process for various return scenarios and defines proof requirements.</p>
+                    <p class="text-gray-700 mb-4">This guide helps customer service process different return situations and explains what kind of proof is needed.</p>
                     <h4 class="text-xl font-medium text-gray-800 mb-2">How to Use the Annotation Center:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>Step 1: Label Return Status (After-Sales Order Level):</strong>
+                        <li><span class="sub-heading">Step 1: Mark the Return Status (for the whole order after it's returned):</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>"No Item Returned":</strong> Select `[All items not received (or returned items are not purchased items)]`. No further details needed.</li>
-                                <li><strong>"Fully/Partially Returned":</strong> Select `[Receive all/part of your purchase]`. This opens return details for Step 2.</li>
-                                <li><strong>Decision Basis:</strong> Use user appeals, order info, merchant/warehouse proof, and merchant reviewed info.
+                                <li><span class="action-point">If "No Item Returned":</span> Choose <span class="highlight-bg">`[All items not received (or returned items are not purchased items)]`</span>. No more details are needed for this step.</li>
+                                <li><span class="action-point">If "Fully/Partially Returned":</span> Choose <span class="highlight-bg">`[Receive all/part of your purchase]`</span>. This will open up more details for Step 2.</li>
+                                <li><span class="sub-heading">How to Decide:</span> Use the customer's appeals, order information, proof from the merchant or warehouse, and any information the merchant has already reviewed.
                                     <ul class="list-square pl-5">
-                                        <li>No `[merchant reviewed]` info: Judge based on user appeal and merchant evidence.</li>
-                                        <li>Has `[merchant reviewed]` info: Judge comprehensively based on that.</li>
+                                        <li>If there's <span class="important-point">no `[merchant reviewed]` info:</span> Make your decision based on the customer's appeal and the merchant's proof.</li>
+                                        <li>If there <span class="action-point">is `[merchant reviewed]` info:</span> Use that information to make a full decision.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Important:</strong> Consider any merchant notes. Follow agreed solutions if chat records show mutual agreement.</li>
+                                <li><span class="important-point">Important:</span> Always read any notes from the merchant. If chat records show that both sides agreed on a solution, follow that agreement.</li>
                             </ul>
                         </li>
-                        <li><strong>Step 2: Label Items Affecting/Not Affecting Secondary Sales:</strong>
+                        <li><span class="sub-heading">Step 2: Mark Items that Affect or Don't Affect Future Sales:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Action:</strong> If items are fully/partially returned, categorize them based on `Proof Standards` (below).</li>
-                                <li><strong>Note:</strong> (Items Affecting Resale) + (Items Not Affecting Resale) must be LESS THAN (Items Requested for Refund).</li>
+                                <li><span class="action-point">Action:</span> If items were fully or partly returned, sort them into categories based on the `Proof Standards` below.</li>
+                                <li><span class="important-point">Remember:</span> The total number of items that <span class="highlight-bg">`Affect Resale`</span> plus <span class="highlight-bg">`Don't Affect Resale`</span> must be <span class="important-point">LESS THAN</span> the total number of items the customer asked for a refund on.</li>
                             </ul>
                         </li>
                     </ul>
 
-                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-6">Proof Standards & Rejection Reasons:</h4>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-6">Proof Standards & Reasons for Rejection:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>All Rejection Reasons:</strong> Merchant received package, claims empty/damaged/incorrect items.</li>
-                        <li><strong>Special Case: Logistics Label Modifications:</strong>
+                        <li><span class="sub-heading">General Rejection Reasons:</span> These apply when the merchant received the package but claims it was empty, damaged, or contained wrong items.</li>
+                        <li><span class="sub-heading">Special Case: Shipping Label Changes:</span>
                             <ul class="list-circle pl-5">
-                                <li>If a user modifies a tracking number and the carrier (e.g., UPS) adds a correction label.</li>
-                                <li><strong>Action:</strong> Verify original label, correction label, and system info. If original label is incorrect, user is responsible.</li>
+                                <li><span class="important-point">Scenario:</span> A customer changes a tracking number, and the shipping company (like UPS) adds a correction label.</li>
+                                <li><span class="action-point">Action:</span> Verify original label, correction label, and system info. If original label is incorrect, user is responsible.</li>
                             </ul>
                         </li>
-                        <li><strong>Reshipment (Updated Oct 18, 2024):</strong>
+                        <li><span class="sub-heading">Reshipment (Updated Oct 18, 2024):</span>
                             <ul class="list-circle pl-5">
-                                <li>If merchant reports entire item reshipped with proof of receipt, support merchant.</li>
-                                <li><strong>Online Reshipment:</strong> User-initiated, workbench shows signed delivery. Support merchant.</li>
-                                <li><strong>Offline Reshipment:</strong> Merchant-user negotiation. No workbench info. Merchant must provide:
+                                <li><span class="action-point">If merchant says the whole item was sent again (reshipped) and has proof of delivery:</span> Support the merchant.</li>
+                                <li><span class="sub-heading">Online Reshipment:</span> If the customer started the reshipment, and our system (workbench) shows it was delivered and signed for, support the merchant.</li>
+                                <li><span class="sub-heading">Offline Reshipment:</span> If the merchant and customer agreed to reship outside our system (no workbench info), the merchant must provide:
                                     <ul class="list-square pl-5">
-                                        <li>Proof of shipment (logistics status shows signed delivery).</li>
-                                        <li>Proof of agreement (e.g., chat screenshots). Both needed to support merchant.</li>
+                                        <li>Proof of shipment (tracking shows it was delivered and signed for).</li>
+                                        <li>Proof of their agreement (e.g., screenshots of chat messages).</li>
+                                        <li><span class="important-point">Both are needed to support the merchant.</span></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><strong>Special Case: Inconsistent Package Size/Weight:</strong>
+                        <li><span class="sub-heading">Special Case: Package Size/Weight Doesn't Match:</span>
                             <ul class="list-circle pl-5">
-                                <li>If proof (e.g., merchant's) shows package size/weight is clearly inconsistent (like an unboxing video).</li>
-                                <li><strong>Action:</strong> Customer service can use common sense to judge.</li>
+                                <li><span class="important-point">Scenario:</span> If proof (like a merchant's unboxing video) clearly shows the package size or weight doesn't match what it should be.</li>
+                                <li><span class="action-point">Action:</span> Use your common sense to decide.</li>
                             </ul>
                         </li>
-                        <li><strong>Duplicate Image Detected:</strong>
+                        <li><span class="sub-heading">Duplicate Image Detected:</span>
                             <ul class="list-circle pl-5">
-                                <li>If warehouse evidence has `[Duplicate Image Detected]` label, mark as `[Received All/Partial Goods]`.</li>
-                                <li><strong>Exception:</strong> If the duplicate is a sample product image, it's not considered the same.</li>
+                                <li><span class="important-point">Scenario:</span> If the warehouse proof has a <span class="highlight-bg">`[Duplicate Image Detected]`</span> label.</li>
+                                <li><span class="action-point">Action:</span> Mark the return as <span class="highlight-bg">`[Received All/Partial Goods]`</span>.</li>
+                                <li><span class="important-point">Exception:</span> If the duplicate is just a sample product picture, it doesn't count as the same.</li>
                             </ul>
                         </li>
-                        <li><strong>Items Not Returned:</strong>
+                        <li><span class="sub-heading">Items Not Returned:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Scenario:</strong> Customer mailed package, tracking shows delivered, but merchant's warehouse claims not received.</li>
-                                <li><strong>Label as "All items not received..." IF proven:</strong>
+                                <li><span class="important-point">Scenario:</span> Customer mailed package, tracking shows delivered, but merchant's warehouse claims not received.</li>
+                                <li><span class="action-point">Mark as "All items not received..." ONLY IF proven:</span>
                                     <ul class="list-square pl-5">
-                                        <li>Incorrect return address (package received at non-warehouse address). (Updated July 17, 2024: If logistics address doesn't match historical or latest warehouse address.)</li>
+                                        <li><span class="important-point">Incorrect return address</span> (package received at non-warehouse address). (Updated July 17, 2024: If logistics address doesn't match historical or latest warehouse address.)</li>
                                         <li>(Updated Sep 19, 2024): Temu label used, but tracking shows delivery address changed by user's actions.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Invalid Proof for "Received all/part...":</strong>
+                                <li><span class="important-point">Proof that is NOT valid for "Received all/part...":</span>
                                     <ul class="list-square pl-5">
-                                        <li>Third-party platform info (e.g., Amazon warehouse didn't receive).</li>
-                                        <li>Screenshots of warehouse query page not finding package.</li>
+                                        <li>Information from other platforms (e.g., Amazon warehouse didn't get it).</li>
+                                        <li>Screenshots of a warehouse search page that can't find the package.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Merchant claims not received (distance rule - Updated Sep 13, 2024):</strong> If distance between carrier's delivery address and merchant's warehouse is less than 5 miles, merchant's evidence is invalid.</li>
-                                <li><strong>Logistics Tracking Only to City/Country Level (Updated Mar 10, 2025):</strong> For C3-C5 users (or C1-C2 with risk control pass) not flagged for risk and no user-side changes in tracking, support user if logistics address is upper-level region of warehouse.</li>
-                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage (usually `[number of items not affecting resale]` if no supporting documents).</li>
+                                <li><span class="important-point">Merchant says not received (distance rule - Updated Sep 13, 2024):</span> If the delivery address from the shipping company is less than 5 miles from the merchant's warehouse, the merchant's proof is not valid.</li>
+                                <li><span class="important-point">Tracking only to City/Country (Updated Mar 10, 2025):</span> For C3-C5 customers (or C1-C2 with risk control pass) not flagged for risk and no user-side changes in tracking, support the customer if the delivery address is just the city/country of the warehouse.</li>
+                                <li><span class="action-point">Action:</span> After marking as <span class="highlight-bg">`[received all/part...]`</span>, go to Step 2 to check for damage (usually <span class="highlight-bg">`[number of items not affecting resale]`</span> if there are no other documents).</li>
                             </ul>
                         </li>
-                        <li><strong>Return Empty Package:</strong>
+                        <li><span class="sub-heading">Return Empty Package:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Scenario:</strong> Merchant warehouse received package, but it's empty.</li>
-                                <li><strong>Label as "All items not received..." IF proven:</strong>
+                                <li><span class="important-point">Scenario:</span> Merchant warehouse got a package, but it was empty.</li>
+                                <li><span class="action-point">Mark as "All items not received..." ONLY IF proven:</span>
                                     <ul class="list-square pl-5">
-                                        <li>Signed package genuinely sent by user (return slip, photos). (Self-operated warehouse: less strict on logistics label in QI video/photo).</li>
-                                        <li>Package is empty (unboxing photos).</li>
+                                        <li>The signed package was truly sent by the customer (return slip, photos). (For our own warehouses, we are less strict about the shipping label in the unboxing video/photo).</li>
+                                        <li>The package was empty (unboxing photos).</li>
                                     </ul>
                                 </li>
-                                <li><strong>If Unproven:</strong> Label as "Received all/part of the purchased items."</li>
-                                <li><strong>Merchant Weight Screenshots (Updated July 9):</strong> If merchant's screenshot of carrier website weight exactly matches predicted weight on workbench, proof is invalid. Label as "Received all/part of the purchased goods."</li>
-                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage.</li>
+                                <li><span class="important-point">If NOT proven:</span> Mark as "Received all/part of the purchased items."</li>
+                                <li><span class="important-point">Merchant Weight Screenshots (Updated July 9):</span> If the merchant's screenshot of the shipping company's website weight exactly matches the expected weight on our system, their proof is not valid. Mark as "Received all/part of the purchased goods."</li>
+                                <li><span class="action-point">Action:</span> After marking as <span class="highlight-bg">`[received all/part...]`</span>, go to Step 2 to check for damage.</li>
                             </ul>
                         </li>
-                        <li><strong>Returned Item Does Not Match:</strong>
+                        <li><span class="sub-heading">Returned Item Does Not Match:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Scenario:</strong> Merchant warehouse received package, but returned item doesn't match ordered type/model.</li>
-                                <li><strong>Label as "All items not received..." IF proven:</strong>
+                                <li><span class="important-point">Scenario:</span> Merchant warehouse got a package, but the item inside doesn't match the type or model ordered.</li>
+                                <li><span class="action-point">Mark as "All items not received..." ONLY IF proven:</span>
                                     <ul class="list-square pl-5">
-                                        <li>Signed package genuinely sent by user (return slip, photos). (Self-operated warehouse: less strict on logistics label in QI video/photo).</li>
-                                        <li>Item or item model doesn't match the order (return item photos).</li>
-                                        <li>Returned item appearance doesn't match product details.</li>
+                                        <li>The signed package was truly sent by the customer (return slip, photos). (For our own warehouses, we are less strict about the shipping label in the unboxing video/photo).</li>
+                                        <li>The item or item model doesn't match the order (photos of the returned item).</li>
+                                        <li>The returned item's look doesn't match the product details.</li>
                                     </ul>
                                 </li>
-                                <li><strong>If Unproven:</strong> Label as "Received all/part of the purchased items."</li>
-                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage.</li>
-                                <li><strong>Customer requests wrong item after-sales:</strong>
+                                <li><span class="important-point">If NOT proven:</span> Mark as "Received all/part of the purchased items."</li>
+                                <li><span class="action-point">Action:</span> After marking as <span class="highlight-bg">`[received all/part...]`</span>, go to Step 2 to check for damage.</li>
+                                <li><span class="sub-heading">Customer says they got the wrong item and want after-sales service:</span>
                                     <ul class="list-square pl-5">
-                                        <li><strong>Step 1.1:</strong> Check if returned items match customer's wrong item description. If NOT consistent, mark `[All items have not been received...]`.</li>
-                                        <li><strong>Step 1.2:</strong> If consistent, check if warehouse has proof of NOT sending wrong item (e.g., packing video). If YES, mark `[All items have not been received...]`.</li>
-                                        <li><strong>Step 1.2 (Alternate):</strong> If warehouse has NO proof of not sending wrong item, or proof is invalid, mark `[Received all/part of the purchased item]`.</li>
+                                        <li><span class="action-point">Step 1.1:</span> Check if returned items match customer's wrong item description. If <span class="important-point">NOT consistent</span>, mark <span class="highlight-bg">`[All items have not been received...]`</span>.</li>
+                                        <li><span class="action-point">Step 1.2:</span> If consistent, check if warehouse has proof of <span class="important-point">NOT sending wrong item</span> (e.g., packing video). If <span class="action-point">YES</span>, mark <span class="highlight-bg">`[All items have not been received...]`</span>.</li>
+                                        <li><span class="action-point">Step 1.2 (Alternate):</span> If warehouse has <span class="important-point">NO proof</span> of not sending wrong item, or proof is invalid, mark <span class="highlight-bg">`[Received all/part of the purchased item]`</span>.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage.</li>
+                                <li><span class="action-point">Action:</span> After marking as <span class="highlight-bg">`[received all/part...]`</span>, go to Step 2 to check for damage.</li>
                             </ul>
                         </li>
-                        <li><strong>Correct Item Has Been Sent (Wrong Item Tag Only):</strong>
+                        <li><span class="sub-heading">Correct Item Was Sent (Only for "Wrong Item" claims):</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Exceptional:</strong> Merchant says "correct item sent" (user might have ordered wrong item). Judge based on notes and PO order details.</li>
-                                <li><strong>Scenario:</strong> Merchant warehouse received user's return, returned item doesn't match order.</li>
-                                <li><strong>If warehouse has evidence correct items were sent (video/screenshot of packaging showing items match user's purchase):</strong> Mark `[All items have not been received...]`.</li>
-                                <li><strong>If no evidence, or evidence doesn't prove match:</strong> Mark `[Received all/part of the purchased items]`.</li>
-                                <li><strong>Action:</strong> After marking `[Received all/part...]`, go to Step 2 to check for damage.</li>
+                                <li><span class="important-point">Special Case:</span> If the merchant says "the correct item was sent" (meaning the customer might have ordered the wrong item). Judge based on notes and PO order details.</li>
+                                <li><span class="important-point">Scenario:</span> Merchant warehouse received user's return, returned item doesn't match order.</li>
+                                <li><span class="action-point">If warehouse has evidence correct items were sent (video/screenshot of packaging showing items match user's purchase):</span> Mark <span class="highlight-bg">`[All items have not been received...]`</span>.</li>
+                                <li><span class="important-point">If no evidence, or evidence doesn't prove match:</span> Mark <span class="highlight-bg">`[Received all/part of the purchased items]`</span>.</li>
+                                <li><span class="action-point">Action:</span> After marking <span class="highlight-bg">`[Received all/part...]`</span>, go to Step 2 to check for damage.</li>
                             </ul>
                         </li>
-                        <li><strong>Returned Item Damaged / Other Rejection Reasons (Resulting in "Received all/part..." in Step 1):</strong>
+                        <li><span class="sub-heading">Returned Item Damaged / Other Rejection Reasons (Resulting in "Received all/part..." in Step 1):</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Exceptional (User reported quality/defect):</strong> If merchant's damage reason is user's original after-sales reason (quality/defect), then product damage not user's fault. Judge based on remarks/order records.</li>
-                                <li><strong>Exceptional (User reported missing item/accessory):</strong> If merchant's evidence shows missing major component, and user's reason was missing item/accessory. Judge comprehensively.</li>
-                                <li><strong>Scenario:</strong> Merchant received return, item damaged or missing major accessories, affecting secondary sales.</li>
-                                <li><strong>Label as "Number of items affecting resale" IF proven:</strong>
+                                <li><span class="important-point">Special Case (Customer reported quality/defect):</span> If merchant's damage reason is user's original after-sales reason (quality/defect), then product damage not user's fault. Judge based on remarks/order records.</li>
+                                <li><span class="important-point">Special Case (Customer reported missing item/accessory):</span> If merchant's evidence shows missing major component, and user's reason was missing item/accessory. Judge comprehensively.</li>
+                                <li><span class="important-point">Scenario:</span> Merchant received return, item damaged or missing major accessories, affecting secondary sales.</li>
+                                <li><span class="action-point">Label as "Number of items affecting resale" ONLY IF proven:</span>
                                     <ul class="list-square pl-5">
                                         <li>Signed package genuinely sent by user.</li>
                                         <li>Item genuinely damaged (detailed photos/videos, e.g., rusted pot).</li>
                                         <li>Damaged item is part of the order (overall photos).</li>
                                     </ul>
                                 </li>
-                                <li><strong>If proof doesn't show damage:</strong> Label as "Number of items not affecting resale."</li>
-                                <li><strong>Note:</strong> External packaging damage, minor wheel wear are normal; label as "Number of items not affecting resale."</li>
-                                <li><strong>Exceptional (User reported damage consistent with merchant):</strong> If merchant's damage record matches user's report (damage not user-caused), label as `[number of items not affecting resale]`.</li>
+                                <li><span class="important-point">If proof doesn't show damage:</span> Label as "Number of items not affecting resale."</li>
+                                <li><span class="sub-heading">Note:</span> External packaging damage, minor wheel wear are normal; label as "Number of items not affecting resale."</li>
+                                <li><span class="important-point">Special Case (User reported damage consistent with merchant):</span> If merchant's damage record matches user's report (damage not user-caused), label as <span class="highlight-bg">`[number of items not affecting resale]`</span>.</li>
                             </ul>
                         </li>
-                        <li><strong>Image Annotation Rules (Local Merchants - CS Follow-up Review):</strong>
+                        <li><span class="sub-heading">Image Annotation Rules (Local Merchants - CS Follow-up Review):</span>
                             <ul class="list-circle pl-5">
-                                <li>New Label: "The merchant's evidence is valid and the pictures displayed to consumers are marked."</li>
-                                <li>When supporting merchant rejection, new labels are added for `[None of the items were received...]` and `[Received all/part...]` (where items affecting resale > 0).</li>
-                                <li><strong>Annotation Options:</strong>
+                                <li><span class="action-point">New Label:</span> "The merchant's evidence is valid and the pictures displayed to consumers are marked."</li>
+                                <li>When supporting merchant rejection, new labels are added for <span class="highlight-bg">`[None of the items were received...]`</span> and <span class="highlight-bg">`[Received all/part...]`</span> (where items affecting resale > 0).</li>
+                                <li><span class="sub-heading">Annotation Options:</span>
                                     <ul class="list-square pl-5">
-                                        <li><strong>Valid, suitable for customer display:</strong> Compliant evidence images.</li>
-                                        <li><strong>Valid, not suitable for consumer display:</strong> Compliant but restricted (faces, backend screenshots, Chinese screenshots, logistics screenshots, high rejection rate merchant images, similar image tags).</li>
-                                        <li><strong>Invalid:</strong> Cannot support rejection (sample images, warehouse query pages).</li>
+                                        <li><span class="action-point">Valid, suitable for customer display:</span> Compliant evidence images.</li>
+                                        <li><span class="important-point">Valid, not suitable for consumer display:</span> Compliant but restricted (faces, backend screenshots, Chinese screenshots, logistics screenshots, high rejection rate merchant images, similar image tags).</li>
+                                        <li><span class="important-point">Invalid:</span> Cannot support rejection (sample images, warehouse query pages).</li>
                                     </ul>
                                 </li>
-                                <li><strong>High-frequency evidence types:</strong> Package shipping label, Logistics tracking website, Product photos, Outer packaging photos.</li>
+                                <li><span class="sub-heading">High-frequency evidence types:</span> Package shipping label, Logistics tracking website, Product photos, Outer packaging photos.</li>
                             </ul>
                         </li>
-                        <li><strong>Rules for Annotating Used Products:</strong>
+                        <li><span class="sub-heading">Rules for Marking Used Products:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Premise:</strong> Merchant MUST have actual product photos in details. If not, reject merchant.</li>
+                                <li><span class="important-point">First Rule:</span> Merchant <span class="important-point">MUST</span> have actual product photos in details. If not, reject merchant.</li>
                                 <li>If merchant's feedback on secondary sales matches actual photos/condition description, it's not consumer's fault. Reject merchant.</li>
-                                <li><strong>Note:</strong> For "item not returned," "correct items sent," "empty package returned," rules are unchanged. Deviation only for `returned items are damaged` or `returned items do not match`. Only Step 2 `[Number of items affecting resale]` is different.</li>
+                                <li><span class="sub-heading">Note:</span> For "item not returned," "correct items sent," "empty package returned," rules are unchanged. Deviation only for `returned items are damaged` or `returned items do not match`. Only Step 2 <span class="highlight-bg">`[Number of items affecting resale]`</span> is different.</li>
                             </ul>
                         </li>
                     </ul>
@@ -484,51 +547,54 @@
                 <!-- Rule Section: High Rejection Rate Merchants -->
                 <section id="high-rejection-merchants" class="mb-10 p-6 border-b border-gray-200 section-anchor">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">13. High Rejection Rate Merchants</h3>
-                    <p class="text-gray-700 mb-4"><strong>Background:</strong> For "Local merchants / semi-managed" orders, some merchants deliberately acted maliciously, leading to unreasonable refusal of after-sales service, hence the `[high rejection rate merchant]` label.</p>
-                    <h4 class="text-xl font-medium text-gray-800 mb-2">Commonalities of such merchants:</h4>
+                    <p class="text-gray-700 mb-4"><strong>Background:</strong> Some local or semi-managed merchants intentionally cause problems by unfairly refusing after-sales service. These merchants are given a <span class="highlight-bg">`[high rejection rate merchant]`</span> label.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">What these merchants often do:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li>Failed to provide a clear and visible return label, making it impossible to prove that the package was indeed returned by the user, and the same evidence was used in multiple cases.</li>
+                        <li>They don't provide a clear return label, so it's hard to prove the customer actually sent the package back.</li>
+                        <li>They use the same proof (evidence) for many different cases.</li>
                     </ul>
-                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Reasons involved to reject after-sales services & Features of evidence provided:</h4>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Reasons they reject after-sales & how their proof usually looks:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>Package returned by the user is empty:</strong>
+                        <li><span class="sub-heading">Claim: Customer returned an empty package:</span>
                             <ul class="list-circle pl-5">
-                                <li>Only one picture of an empty package is provided, but it cannot be proven that it was sent back by the user in the current case.</li>
+                                <li><span class="important-point">Proof:</span> They only show one picture of an empty package, but it can't be proven that this specific package was sent back by the current customer.</li>
                             </ul>
                         </li>
-                        <li><strong>Returned item does not match:</strong>
+                        <li><span class="sub-heading">Claim: Returned item does not match:</span>
                             <ul class="list-circle pl-5">
-                                <li>Only one return package unboxing video is provided, but the return label information is not clearly visible.</li>
-                                <li>The merchant provided 1 return label and 1 photo of the package after it was opened, but the two cannot be linked.</li>
-                                <li>The merchant provided a return label that was almost brand new and a video of a return package being opened, but the return label in that video was not legible, and the two could not be linked, nor could it be proven that the return was sent by the current user.</li>
+                                <li><span class="important-point">Proof:</span> They only show one video of a return package being opened, but the return label info isn't clear.</li>
+                                <li><span class="important-point">Proof:</span> They show 1 return label and 1 photo of the opened package, but these two pieces of proof don't clearly connect to each other.</li>
+                                <li><span class="important-point">Proof:</span> They show a new-looking return label and a video of an opened package, but the label in the video isn't readable, and it can't be proven that this return was from the current customer.</li>
                             </ul>
                         </li>
-                        <li><strong>Returned item is damaged:</strong>
+                        <li><span class="sub-heading">Claim: Returned item is damaged:</span>
                             <ul class="list-circle pl-5">
-                                <li>One picture of a damaged / obviously used product is provided, but it cannot be proven that it was sent back by the current user in this case.</li>
+                                <li><span class="important-point">Proof:</span> They only show one picture of a damaged or clearly used product, but it can't be proven that this specific item was sent back by the current customer.</li>
                             </ul>
                         </li>
                     </ul>
-                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Processing Standards for Annotation Tickets:</h4>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">How to Process Tickets for High Rejection Rate Merchants:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>① When the label "high rejection rate merchant" is applied, in the rejection scenarios of "returning an empty package", "returning a mismatched item", and "having already sent the correct item":</strong>
+                        <li><span class="sub-heading">Rule ①: For claims like "empty package," "mismatched item," or "correct item already sent":</span>
                             <ul class="list-circle pl-5">
-                                <li>In addition to meeting the evidence requirements listed in the "5.4.2 [Local Merchants] Second Review of Merchant Appeal for Allegedly Missing Items in Returned Goods" under "5. Standards for Evidence", <strong>all of the following conditions must also be met</strong> in order to annotate the case as `[None of the items has been received (or the returned items are not the purchased items)]`; otherwise, it must be annotated as `[All/some of the purchased items have been received]`:
+                                <li>To mark the case as <span class="highlight-bg">`[None of the items has been received (or the returned items are not the purchased items)]`</span>, the merchant must meet <span class="important-point">ALL of the following conditions</span>, *in addition* to the normal evidence rules from "7. General Processing Steps & Proof Standards":
                                     <ul class="list-square pl-5">
-                                        <li>A clearly visible return label is provided, which matches the "return tracking number" displayed on the workbench.</li>
-                                        <li>It can be proven that the returned items do not match or that the return package is empty, and that this was verified by unpacking the package returned by the user. (The unpacking video must be complete and continuous, with the entire unpacking process visible throughout.)</li>
+                                        <li>They provide a <span class="action-point">clear return label</span> that matches the "return tracking number" shown on our system (workbench).</li>
+                                        <li>They can <span class="action-point">prove that the returned items don't match or that the package was empty</span>, and this was confirmed by watching the unboxing of the package sent by the customer. (The unboxing video must be complete and continuous, showing the entire process.)</li>
                                     </ul>
                                 </li>
+                                <li><span class="important-point">Otherwise (if not all conditions above are met):</span> You must mark the case as <span class="highlight-bg">`[All/some of the purchased items have been received]`</span>.</li>
                             </ul>
                         </li>
-                        <li><strong>② When the label "high return rejection rate merchant" is applied, in the scenario of "Returned item damaged" / other reasons for rejection:</strong>
+                        <li><span class="sub-heading">Rule ②: For claims like "Returned item damaged" or other rejection reasons:</span>
                             <ul class="list-circle pl-5">
-                                <li>In addition to meeting the evidence requirements listed in the "5.4.2 [Local Merchants] Second Review of Merchant Appeal for Allegedly Missing Items in Returned Goods" under "5. Standards for Evidence", all of the following conditions must also be met in order to annotate it as `[All / some of the purchased items have been received]`, and fill in the "Number of items that affect resale" and "Number of items that do not affect resale" based on facts. Otherwise, "All / some of the purchased items have been received" and "Number of items that affect resale" should be annotated as 0.
+                                <li>To mark the case as <span class="highlight-bg">`[All / some of the purchased items have been received]`</span> and fill in the "Number of items that affect resale" and "Number of items that do not affect resale" based on facts, the merchant must meet <span class="important-point">ALL of the following conditions</span>, *in addition* to the normal evidence rules from "7. General Processing Steps & Proof Standards":
                                     <ul class="list-square pl-5">
-                                        <li>A clearly visible return label is provided, which matches the "return tracking number" displayed on the workbench.</li>
-                                        <li>It can be proven that the returned items damaged / the returned items affect resale, and that this was verified by unpacking the package returned by the user. (The unpacking video must be complete and continuous, with the entire unpacking process visible throughout.)</li>
+                                        <li>They provide a <span class="action-point">clear return label</span> that matches the "return tracking number" shown on our system (workbench).</li>
+                                        <li>They can <span class="action-point">prove that the returned items are damaged or affect resale</span>, and this was confirmed by watching the unboxing of the package sent by the customer. (The unboxing video must be complete and continuous, showing the entire process.)</li>
                                     </ul>
                                 </li>
+                                <li><span class="important-point">Otherwise (if not all conditions above are met):</span> You must mark <span class="highlight-bg">"All / some of the purchased items have been received"</span> and set <span class="highlight-bg">"Number of items that affect resale" to 0</span>.</li>
                             </ul>
                         </li>
                     </ul>
@@ -546,13 +612,13 @@
                     <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
                     <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Annotate quantity of items affecting/not affecting secondary sales.</p>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li><strong>Label as `[Number of items affecting resale]` IF proven:</strong>
+                        <li><span class="action-point">Label as `[Number of items affecting resale]` IF proven:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Book Integrity:</strong> Missing pages, damage, stains, writing, tearing that affect reading. Missing attachments (CDs, bookmarks).</li>
-                                <li><strong>Book Condition:</strong> Obvious creases/damage/stains on cover/spine. Severely yellowed, moldy, or insect-eaten inner pages.</li>
+                                <li><span class="sub-heading">Book Integrity:</span> Missing pages, damage, stains, writing, tearing that affect reading. Missing attachments (CDs, bookmarks).</li>
+                                <li><span class="sub-heading">Book Condition:</span> Obvious creases/damage/stains on cover/spine. Severely yellowed, moldy, or insect-eaten inner pages.</li>
                             </ul>
                         </li>
-                        <li><strong>Note:</strong> If merchant rejects due to damage, and user's reason was `[quality issues/product defects]` or `[missing items/accessories]`, and chat record confirms, annotate `[Number of items not affecting resale]`.</li>
+                        <li><span class="sub-heading">Note:</span> If merchant rejects due to damage, and user's reason was `[quality issues/product defects]` or `[missing items/accessories]`, and chat record confirms, annotate `[Number of items not affecting resale]`.</li>
                     </ul>
 
                     <!-- Used Books Refund Calculator -->
@@ -578,13 +644,13 @@
                     <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
                     <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Annotate quantity of items affecting/not affecting secondary sales.</p>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li><strong>Label as `[Number of items affecting resale]` IF proven:</strong>
+                        <li><span class="action-point">Label as `[Number of items affecting resale]` IF proven:</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Product Appearance:</strong> Extensive damage, deformation, broken screen.</li>
-                                <li><strong>Accessories:</strong> Important accessories missing (power adapter, remote control).</li>
+                                <li><span class="sub-heading">Product Appearance:</span> Extensive damage, deformation, broken screen.</li>
+                                <li><span class="sub-heading">Accessories:</span> Important accessories missing (power adapter, remote control).</li>
                             </ul>
                         </li>
-                        <li><strong>Note:</strong> If merchant rejects due to damage, and user's reason was `[quality issue/product defect]` or `[missing items/accessories]`, and chat record confirms, annotate `[Number of items affecting resale]`.</li>
+                        <li><span class="sub-heading">Note:</span> If merchant rejects due to damage, and user's reason was `[quality issue/product defect]` or `[missing items/accessories]`, and chat record confirms, annotate `[Number of items affecting resale]`.</li>
                     </ul>
 
                     <!-- Used 3C Refund Calculator -->
@@ -610,8 +676,8 @@
                     <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
                     <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Indicate number of items affecting/not affecting resale.</p>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li><strong>Prerequisites:</strong> Merchant must have real photos in product details (else, reject merchant). If merchant's resale issue matches real photos/condition, not customer's responsibility (reject merchant).</li>
-                        <li><strong>Use `[Number of items affecting resale]` label IF video proves:</strong>
+                        <li><span class="important-point">Prerequisites:</span> Merchant must have real photos in product details (else, reject merchant). If merchant's resale issue matches real photos/condition, not customer's responsibility (reject merchant).</li>
+                        <li><span class="action-point">Use `[Number of items affecting resale]` label IF video proves:</span>
                             <ul class="list-circle pl-5">
                                 <li>Already activated.</li>
                                 <li>iCloud account not logged out, used with obvious signs of use, damaged/non-functioning parts, disassembled and returned.</li>
@@ -645,7 +711,7 @@
                     <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
                     <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Annotate number of items affecting/not affecting resale.</p>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li><strong>Label corresponding items with "Number of items affecting resale" IF video evidence confirms:</strong>
+                        <li><span class="action-point">Label corresponding items with "Number of items affecting resale" IF video evidence confirms:</span>
                             <ul class="list-circle pl-5">
                                 <li>Box seal removed.</li>
                                 <li>Minor scratches on screen or body.</li>
@@ -655,7 +721,7 @@
                                 <li>Accessories severely damaged or missing (earphones, remotes, chargers, data cables, power cords, protective cases, TV stands).</li>
                             </ul>
                         </li>
-                        <li><strong>Note:</strong> For damaged/missing accessories, verify list on product details page or seller's instructions.</li>
+                        <li><span class="sub-heading">Note:</span> For damaged/missing accessories, verify list on product details page or seller's instructions.</li>
                     </ul>
 
                     <!-- Brand New 3C Refund Calculator -->
@@ -686,13 +752,13 @@
                     </ul>
                     <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Requirements for Supporting Documents:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>Proof of Shipping:</strong> Accepted if any one of the following conditions is met:
+                        <li><span class="sub-heading">Proof of Shipping:</span> Accepted if any one of the following conditions is met:
                             <ul class="list-circle pl-5">
                                 <li>The shipping outer packaging information: The shipping label and SN code must be clearly visible at the same time.</li>
                                 <li>The return outer packaging information: The shipping label and SN code must be clearly seen at the same time. (The shipping label and SN code must be on the same page.)</li>
                             </ul>
                         </li>
-                        <li><strong>Proof of Return:</strong> Must meet the following conditions simultaneously:
+                        <li><span class="sub-heading">Proof of Return:</span> Must meet the following conditions simultaneously:
                             <ul class="list-circle pl-5">
                                 <li>Returned outer packaging information: The return shipping label must be clearly visible.</li>
                                 <li>A complete video of the machine being taken out of the packaging, and the machine's serial number can be clearly seen.</li>
@@ -701,26 +767,26 @@
                     </ul>
                     <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Review Requirements for Customer Service:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>When the user returns the item in a non-original packaging box/returns the product in the original packaging box but the shipping label information and SN code cannot be verified:</strong>
+                        <li><span class="sub-heading">When the user returns the item in a non-original packaging box/returns the product in the original packaging box but the shipping label information and SN code cannot be verified:</span>
                             <ul class="list-circle pl-5">
-                                <li>If the following four points can be proved, annotate as follows: `[All items have not been received (or none of the returned items are the purchased items)]`, otherwise annotate as `[Received all/part of the purchased items]`:
+                                <li><span class="action-point">If the following four points can be proven, annotate as follows:</span> <span class="highlight-bg">`[All items have not been received (or none of the returned items are the purchased items)]`</span>, otherwise annotate as <span class="highlight-bg">`[Received all/part of the purchased items]`</span>:
                                     <ul class="list-square pl-5">
                                         <li>The shipping package tracking number and the PO details match.</li>
                                         <li>The shipping tracking number and the SN code are displayed on the same page.</li>
                                         <li>The return package tracking number and the PO details match.</li>
-                                        <li>In the complete video of the machine being taken out of the packaging, the SN code on the machine body can be seen, and the SN code <strong>does not match</strong> the SN code on the shipping outer packaging/the SN code on the package tracking system.</li>
+                                        <li>In the complete video of the machine being taken out of the packaging, the SN code on the machine body can be seen, and the SN code <span class="important-point">does not match</span> the SN code on the shipping outer packaging/the SN code on the package tracking system.</li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><strong>When the user returns the item in the original packaging, and all the shipping information is retained (the shipping label, SN code, etc):</strong>
+                        <li><span class="sub-heading">When the user returns the item in the original packaging, and all the shipping information is retained (the shipping label, SN code, etc):</span>
                             <ul class="list-circle pl-5">
-                                <li>If the following four points can be proved, annotate as follows: `[All items have not been received (or none of the returned items are the purchased items)]`, otherwise annotate as `[Received all/part of the purchased items]`. (If they provide the original package as their supporting documents, it can be used as a reference also.)
+                                <li><span class="action-point">If the following four points can be proven, annotate as follows:</span> <span class="highlight-bg">`[All items have not been received (or none of the returned items are the purchased items)]`</span>, otherwise annotate as <span class="highlight-bg">`[Received all/part of the purchased items]`</span>. (If they provide the original package as their supporting documents, it can be used as a reference also.)
                                     <ul class="list-square pl-5">
                                         <li>The complete video of the machine being taken out of the packaging (the video should include the shipping label, return label, outer packaging SN code, and machine SN code).</li>
                                         <li>The shipping package tracking number and the PO details match.</li>
                                         <li>The return package tracking number and the PO details match.</li>
-                                        <li>The SN code on the machine <strong>does not match</strong> the SN code on the shipping outer packaging.</li>
+                                        <li>The SN code on the machine <span class="important-point">does not match</span> the SN code on the shipping outer packaging.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -735,8 +801,8 @@
                     <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
                     <p class="text-gray-700 mb-2"><strong>Step 2:</strong> If it is confirmed that all/some of the items purchased in the order have been returned, please further annotate the quantity of items received by the warehouse that affect/do not affect secondary sales.</p>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
-                        <li><strong>Anything that can be proven is marked as `[Number of items affecting resale]`</strong> (e.g., Certificate lost, Minor damage - scratches, Severe damage - bent or broken, Weight reduced).</li>
-                        <li><strong>Note:</strong> If merchant rejects due to damage, and user's reason was `[quality issue/product defect]/[missing items/accessories]`, and chat record confirms, mark as `[Number of items not affecting resale]`.</li>
+                        <li><span class="action-point">Anything that can be proven is marked as `[Number of items affecting resale]`</span> (e.g., Certificate lost, Minor damage - scratches, Severe damage - bent or broken, Weight reduced).</li>
+                        <li><span class="sub-heading">Note:</span> If merchant rejects due to damage, and user's reason was `[quality issue/product defect]/[missing items/accessories]`, and chat record confirms, mark as `[Number of items not affecting resale]`.</li>
                     </ul>
 
                     <!-- Precious Metal Goods Refund Calculator -->
@@ -760,17 +826,17 @@
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4">15. Wig Seller Rules</h3>
                     <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
                     <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                        <li><strong>Step 1: Check Mall ID:</strong>
+                        <li><span class="sub-heading">Step 1: Check Mall ID:</span>
                             <ul class="list-circle pl-5">
                                 <li>If Mall ID is 634418217066498, 634418216283083, 634418214716867, or 634418216177352, proceed to Step 2.</li>
                                 <li>If not, handle according to the standard process.</li>
                                 <li>If seller has "Merchants with high rejection rate" label, proceed to Step 2 as well.</li>
                             </ul>
                         </li>
-                        <li><strong>Step 2: Check User Tier (Risk Level):</strong>
+                        <li><span class="sub-heading">Step 2: Check User Tier (Risk Level):</span>
                             <ul class="list-circle pl-5">
-                                <li><strong>Support High-Tier Customers:</strong> If user is C3-C5, or C1-C2 but passes risk control, mark "Received all/part of purchased items" & "Resale unaffected" and approve refund.</li>
-                                <li><strong>Reject Request:</strong> If user is C1-C2 and fails risk control.</li>
+                                <li><span class="action-point">Support High-Tier Customers:</span> If user is C3-C5, or C1-C2 but passes risk control, mark "Received all/part of purchased items" & "Resale unaffected" and approve refund.</li>
+                                <li><span class="important-point">Reject Request:</span> If user is C1-C2 and fails risk control.</li>
                             </ul>
                         </li>
                     </ul>
