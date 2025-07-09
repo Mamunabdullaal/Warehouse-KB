@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMU Returns & Quality Knowledge Base</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .section-anchor {
+            scroll-margin-top: 80px; /* Adjust for fixed header */
+        }
+        .nav-link:hover {
+            background-color: #e5e7eb;
+        }
+        .calculator-input {
+            border: 1px solid #d1d5db;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            width: 100%;
+        }
+        .calculator-checkbox {
+            margin-right: 0.5rem;
+        }
+        .category-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 120px; /* Fixed height for consistent look */
+        }
+        .category-card:hover {
+            background-color: #f0f4f8;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .category-card h3 {
+            font-weight: 600;
+            color: #4f46e5;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 p-4 flex flex-col sm:flex-row items-center justify-between">
+        <h1 class="text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">TEMU Knowledge Base</h1>
+        <div class="flex items-center w-full sm:w-auto">
+            <input type="text" id="searchInput" placeholder="Search rules..." class="p-2 border border-gray-300 rounded-l-md w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button id="searchButton" class="bg-indigo-600 text-white p-2 rounded-r-md hover:bg-indigo-700 transition-colors duration-200">Search</button>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 pt-24"> <!-- Adjusted padding-top for fixed header -->
+
+        <!-- Navigation Sidebar (can be toggled or always visible on larger screens) -->
+        <nav class="hidden lg:block fixed left-4 top-24 w-64 bg-white p-6 rounded-lg shadow-lg overflow-y-auto" style="height: calc(100vh - 120px);">
+            <h3 class="text-lg font-semibold mb-4 text-gray-800">Sections</h3>
+            <ul class="space-y-2">
+                <li><a href="#initial-warehouse-group" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Initial Warehouse & General Processing</a></li>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><a href="#initial-qc" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">1. Initial Warehouse Quality Check</a></li>
+                    <li><a href="#general-processing-procedure" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">4.1. General Processing Procedure</a></li>
+                </ul>
+                <li><a href="#wrong-package-group" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Wrong Package Handling</a></li>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><a href="#wrong-package-external" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">2. Wrong Package Second Review - External</a></li>
+                    <li><a href="#wrong-package-processing-procedure" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">4.2. Wrong Package Processing Procedure</a></li>
+                    <li><a href="#processing-rules-labels" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">5. Processing Rules (Labels)</a></li>
+                </ul>
+                <li><a href="#local-merchant-group" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Local Merchant & General Return Rules</a></li>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><a href="#local-merchant-appeals" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">3. Local Merchant Appeals</a></li>
+                    <li><a href="#merchant-rejection-reasons" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">6. Merchant Rejection Reasons</a></li>
+                    <li><a href="#general-processing-proof" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">7. General Processing & Proof</a></li>
+                    <li><a href="#high-rejection-merchants" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">13. High Rejection Rate Merchants</a></li>
+                </ul>
+                <li><a href="#other-product-categories" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Specific Product Category Rules</a></li>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><a href="#used-books" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">8. Used Books</a></li>
+                    <li><a href="#used-3c-electronics" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">9. Used 3C Electronic Products</a></li>
+                    <li><a href="#used-iphone" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">10. Used iPhone</a></li>
+                    <li><a href="#brand-new-3c" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">11. Brand New 3C Products</a></li>
+                    <li><a href="#high-value-electronics-sn" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">12. High-Value Electronics (SN Code)</a></li>
+                    <li><a href="#precious-metal-goods" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">14. Precious Metal Goods</a></li>
+                    <li><a href="#wig-seller-rules" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">15. Wig Seller Rules</a></li>
+                </ul>
+            </ul>
+        </nav>
+
+        <main class="lg:ml-72 p-6 bg-white rounded-lg shadow-lg"> <!-- Adjusted margin-left for sidebar -->
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">TEMU Returns & Quality Knowledge Base</h2>
+            <p class="mb-8 text-gray-700">Welcome to the TEMU Knowledge Base. Here you'll find summarized rules and procedures for various return and quality check scenarios. Use the navigation on the left or the search bar to find the information you need quickly.</p>
+
+            <!-- New Category Buttons -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <a href="#initial-warehouse-group" class="category-card">
+                    <h3>Initial Warehouse Rules</h3>
+                    <p class="text-gray-600 text-sm">Procedures for initial checks and general processing.</p>
+                </a>
+                <a href="#wrong-package-group" class="category-card">
+                    <h3>Wrong Package Rules</h3>
+                    <p class="text-gray-600 text-sm">Guidelines for handling incorrect package returns.</p>
+                </a>
+                <a href="#local-merchant-group" class="category-card">
+                    <h3>Local Merchant Rules</h3>
+                    <p class="text-gray-600 text-sm">Standards for merchant appeals and rejection rates.</p>
+                </a>
+            </div>
+
+            <!-- Group: Initial Warehouse & General Processing Rules -->
+            <section id="initial-warehouse-group" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Initial Warehouse & General Processing Rules</h2>
+
+                <!-- Rule Section: Initial Warehouse Quality Check -->
+                <section id="initial-qc" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">1. Initial Warehouse Quality Check - Fewer Items Returned</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To ensure items meet quality standards upon arrival at the warehouse, especially when fewer items are returned than expected.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps (Conceptual):</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Receiving & Initial Scan:</strong> How returned items are logged into the system.</li>
+                        <li><strong>Item Count Verification:</strong> Comparing the physical count of returned items with the expected quantity.</li>
+                        <li><strong>Discrepancy Handling:</strong> Steps to take if the count doesn't match (e.g., investigation, reporting).</li>
+                        <li><strong>Quality Assessment:</strong> Basic checks for item condition (damaged, used, etc.).</li>
+                        <li><strong>Documentation:</strong> Recording all findings and actions.</li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: General Processing Procedure for Returns & Appeals -->
+                <section id="general-processing-procedure" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">4.1. General Processing Procedure for Returns & Appeals</h3>
+                    <p class="text-gray-700 mb-4">This procedure helps customer service review returns and consumer appeals, especially for initial warehouse quality checks.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Step 1: Is the Warehouse Proof Good Enough?</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Choose "Yes" if:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>The video clearly shows the item being unpacked.</li>
+                                        <li>OR, the warehouse sent photos (no video), and the photos clearly show the returned item(s).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Choose "No" if:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>The warehouse sent no video or photos.</li>
+                                        <li>OR, photos were sent (no video), but they don't clearly show the item(s).</li>
+                                        <li>OR, video/photos were sent, but you can't tell if the item(s) belong to this return.</li>
+                                        <li>OR, the camera angle is wrong, or the person is doing things out of view.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Important:</strong> If you choose "No," do not go to Step 2.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 2: Check How Many Items the Warehouse Received.</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> Look at the video and write down how many items the warehouse got.</li>
+                                <li>Count items that are clearly seen or seem to be returned in the video.</li>
+                                <li>If no unpacking is shown, but the box is big enough for the item(s), count them as returned.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 3: Confirm Item Count.</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> Make sure you have finished counting and checking the items.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 4: Add a Note and Finish.</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Suggested Notes:</strong> "Video not valid," "Video valid, Item(s) checked," "Video valid, Item(s) could not be checked," "Video valid, item not found."</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Group: Wrong Package Handling Rules -->
+            <section id="wrong-package-group" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Wrong Package Handling Rules</h2>
+
+                <!-- Rule Section: Wrong Package Second Review - External -->
+                <section id="wrong-package-external" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">2. Wrong Package Second Review - External</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To conduct a secondary review of packages flagged as incorrect, focusing on external details before internal inspection.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps (Conceptual):</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Package Identification:</strong> Confirming the package as a "wrong package" based on initial flags.</li>
+                        <li><strong>External Label Check:</strong> Verifying shipping labels, recipient information, and tracking details.</li>
+                        <li><strong>Integrity Check:</strong> Assessing external packaging for tampering or damage.</li>
+                        <li><strong>System Cross-Check:</strong> Comparing external details with order records.</li>
+                        <li><strong>Next Action:</strong> Deciding if further internal review is needed or if the package can be routed.</li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: Processing Procedure (Wrong Package Focus) -->
+                <section id="wrong-package-processing-procedure" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">4.2. Wrong Package Processing Procedure</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To guide customer service in reviewing returns and consumer appeals, specifically for wrong packages.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Step 1: Is Warehouse Evidence Valid?</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Yes:</strong> If video clearly shows unpacking, OR warehouse provided clear photos of items without video.</li>
+                                <li><strong>No:</strong> If no video/photos, or photos are unclear, or it's impossible to tell if items belong to user, or camera angle is bad.</li>
+                                <li><strong>Action:</strong> If "No," stop here.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 2: Verify Item Count in Video.</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> Customer service must count items seen in the video. Even suspected returned items count. If no unpacking video, but the box size fits the items, count them as returned.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 3: Confirm Items Received.</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> Customer service must confirm completion of item count verification.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 4: Add Remark & Submit.</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Recommended Remarks:</strong> "Invalid video," "Valid video, Item(s) verified," "Valid video, Item(s) unable to be verified," "Valid video, item unable to be found."</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: Processing Rules (Labels) -->
+                <section id="processing-rules-labels" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">5. Processing Rules: Package & Shipping Label Verification (Wrong Package Focus)</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To accurately verify package and shipping labels for "wrong package" claims.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Important Notes:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Package labels and shipping labels are separate. Don't mix their numbers.</li>
+                        <li>Check ALL customer photos for each step, as they might be mixed up.</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Step 1: Labels from the Same Package?</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> If NOT from the same package (e.g., shipping label on bag, package label on box), select "Not uploaded."</li>
+                                <li><strong>Action:</strong> If from the same package or unsure, go to Step 2.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 2: Is Logistics Tracking Number Correct?</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> Check shipping label photo against the tracking number.</li>
+                                <li><strong>Mismatched/Fake:</strong> If they don't match, or photo is clearly fake/edited, select "Not uploaded" for both labels.</li>
+                                <li><strong>Match:</strong> Select "Yes."</li>
+                                <li><strong>Unclear:</strong> If shipping label photo is unclear, select "Not uploaded" for shipping label.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 3: Is Package Number Correct?</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> Check package label photo against the package number and "packing time" (time on label should match packing time, usually same day).</li>
+                                <li><strong>Consistent (Label & Time):</strong> Select "Yes."</li>
+                                <li><strong>Label OK, Time Different:</strong> Select "Not uploaded."</li>
+                                <li><strong>Label & Time Inconsistent (No Editing):</strong> Select "No."</li>
+                                <li><strong>Unclear:</strong> If package label photo is unclear, select "Not uploaded."</li>
+                                <li><strong>Incomplete Label, Visible Part Doesn't Match, Time Consistent:</strong> Select "No."</li>
+                                <li><strong>Incomplete Label, Cannot Confirm Match:</strong> Select "Not uploaded."</li>
+                                <li><strong>Fake Package Label:</strong> Select "Not uploaded" for both, note "Evidence appears to be fraudulent."</li>
+                                <li><strong>Note:</strong> If shipping label covers package label's time, you can ignore checking packing time.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Group: Local Merchant & General Return Rules -->
+            <section id="local-merchant-group" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Local Merchant & General Return Rules</h2>
+
+                <!-- Rule Section: Local Merchants Appeals -->
+                <section id="local-merchant-appeals" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">3. Local Merchants: Second Review of Merchant Appeal for Allegedly Missing Items in Returned Goods</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To re-evaluate appeals from local merchants claiming items are missing from returned goods. This ensures fair resolution in disputes.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps (Conceptual):</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Appeal Intake:</strong> Logging the merchant's appeal and gathering all submitted evidence.</li>
+                        <li><strong>Initial Data Review:</strong> Comparing merchant claims with return records.</li>
+                        <li><strong>Evidence Evaluation:</strong> Critically assessing photos, videos, or other documents provided by the merchant.</li>
+                        <li><strong>Internal Verification:</strong> Checking warehouse records or conducting physical checks if necessary.</li>
+                        <li><strong>Decision & Communication:</strong> Making a final decision on the appeal and informing the merchant.</li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: Merchant Rejection Reasons -->
+                <section id="merchant-rejection-reasons" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">6. Merchant Rejection Reasons (Local Merchants)</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> Defines valid reasons for merchants to reject returns.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Rejection Reasons:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Returned Item Does Not Match:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Reason:</strong> User returned an item different from what was sold/sent.</li>
+                                <li><strong>CS Action:</strong> Check order details, user's request, and evidence. If user received mismatched/damaged/quality-issue item, support the user.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Returned Item Damaged:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Reason:</strong> User returned an item that is damaged, worn, or cannot be resold.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: General Processing Steps & Proof Standards -->
+                <section id="general-processing-proof" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">7. General Processing Steps & Proof Standards (Local Merchants)</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> Guides customer service through the annotation process for various return scenarios and defines proof requirements.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">How to Use the Annotation Center:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Step 1: Label Return Status (After-Sales Order Level):</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>"No Item Returned":</strong> Select `[All items not received (or returned items are not purchased items)]`. No further details needed.</li>
+                                <li><strong>"Fully/Partially Returned":</strong> Select `[Receive all/part of your purchase]`. This opens return details for Step 2.</li>
+                                <li><strong>Decision Basis:</strong> Use user appeals, order info, merchant/warehouse proof, and merchant reviewed info.
+                                    <ul class="list-square pl-5">
+                                        <li>No `[merchant reviewed]` info: Judge based on user appeal and merchant evidence.</li>
+                                        <li>Has `[merchant reviewed]` info: Judge comprehensively based on that.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Important:</strong> Consider any merchant notes. Follow agreed solutions if chat records show mutual agreement.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 2: Label Items Affecting/Not Affecting Secondary Sales:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Action:</strong> If items are fully/partially returned, categorize them based on `Proof Standards` (below).</li>
+                                <li><strong>Note:</strong> (Items Affecting Resale) + (Items Not Affecting Resale) must be LESS THAN (Items Requested for Refund).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-6">Proof Standards & Rejection Reasons:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>All Rejection Reasons:</strong> Merchant received package, claims empty/damaged/incorrect items.</li>
+                        <li><strong>Special Case: Logistics Label Modifications:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If a user modifies a tracking number and the carrier (e.g., UPS) adds a correction label.</li>
+                                <li><strong>Action:</strong> Verify original label, correction label, and system info. If original label is incorrect, user is responsible.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Reshipment (Updated Oct 18, 2024):</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If merchant reports entire item reshipped with proof of receipt, support merchant.</li>
+                                <li><strong>Online Reshipment:</strong> User-initiated, workbench shows signed delivery. Support merchant.</li>
+                                <li><strong>Offline Reshipment:</strong> Merchant-user negotiation. No workbench info. Merchant must provide:
+                                    <ul class="list-square pl-5">
+                                        <li>Proof of shipment (logistics status shows signed delivery).</li>
+                                        <li>Proof of agreement (e.g., chat screenshots). Both needed to support merchant.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Special Case: Inconsistent Package Size/Weight:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If proof (e.g., merchant's) shows package size/weight is clearly inconsistent (like an unboxing video).</li>
+                                <li><strong>Action:</strong> Customer service can use common sense to judge.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Duplicate Image Detected:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If warehouse evidence has `[Duplicate Image Detected]` label, mark as `[Received All/Partial Goods]`.</li>
+                                <li><strong>Exception:</strong> If the duplicate is a sample product image, it's not considered the same.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Items Not Returned:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Scenario:</strong> Customer mailed package, tracking shows delivered, but merchant's warehouse claims not received.</li>
+                                <li><strong>Label as "All items not received..." IF proven:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>Incorrect return address (package received at non-warehouse address). (Updated July 17, 2024: If logistics address doesn't match historical or latest warehouse address.)</li>
+                                        <li>(Updated Sep 19, 2024): Temu label used, but tracking shows delivery address changed by user's actions.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Invalid Proof for "Received all/part...":</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>Third-party platform info (e.g., Amazon warehouse didn't receive).</li>
+                                        <li>Screenshots of warehouse query page not finding package.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Merchant claims not received (distance rule - Updated Sep 13, 2024):</strong> If distance between carrier's delivery address and merchant's warehouse is less than 5 miles, merchant's evidence is invalid.</li>
+                                <li><strong>Logistics Tracking Only to City/Country Level (Updated Mar 10, 2025):</strong> For C3-C5 users (or C1-C2 with risk control pass) not flagged for risk and no user-side changes in tracking, support user if logistics address is upper-level region of warehouse.</li>
+                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage (usually `[number of items not affecting resale]` if no supporting documents).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Return Empty Package:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Scenario:</strong> Merchant warehouse received package, but it's empty.</li>
+                                <li><strong>Label as "All items not received..." IF proven:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>Signed package genuinely sent by user (return slip, photos). (Self-operated warehouse: less strict on logistics label in QI video/photo).</li>
+                                        <li>Package is empty (unboxing photos).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>If Unproven:</strong> Label as "Received all/part of the purchased items."</li>
+                                <li><strong>Merchant Weight Screenshots (Updated July 9):</strong> If merchant's screenshot of carrier website weight exactly matches predicted weight on workbench, proof is invalid. Label as "Received all/part of the purchased goods."</li>
+                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Returned Item Does Not Match:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Scenario:</strong> Merchant warehouse received package, but returned item doesn't match ordered type/model.</li>
+                                <li><strong>Label as "All items not received..." IF proven:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>Signed package genuinely sent by user (return slip, photos). (Self-operated warehouse: less strict on logistics label in QI video/photo).</li>
+                                        <li>Item or item model doesn't match the order (return item photos).</li>
+                                        <li>Returned item appearance doesn't match product details.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>If Unproven:</strong> Label as "Received all/part of the purchased items."</li>
+                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage.</li>
+                                <li><strong>Customer requests wrong item after-sales:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li><strong>Step 1.1:</strong> Check if returned items match customer's wrong item description. If NOT consistent, mark `[All items have not been received...]`.</li>
+                                        <li><strong>Step 1.2:</strong> If consistent, check if warehouse has proof of NOT sending wrong item (e.g., packing video). If YES, mark `[All items have not been received...]`.</li>
+                                        <li><strong>Step 1.2 (Alternate):</strong> If warehouse has NO proof of not sending wrong item, or proof is invalid, mark `[Received all/part of the purchased item]`.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Action:</strong> After labeling as `[received all/part...]`, go to Step 2 to check for damage.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Correct Item Has Been Sent (Wrong Item Tag Only):</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Exceptional:</strong> Merchant says "correct item sent" (user might have ordered wrong item). Judge based on notes and PO order details.</li>
+                                <li><strong>Scenario:</strong> Merchant warehouse received user's return, returned item doesn't match order.</li>
+                                <li><strong>If warehouse has evidence correct items were sent (video/screenshot of packaging showing items match user's purchase):</strong> Mark `[All items have not been received...]`.</li>
+                                <li><strong>If no evidence, or evidence doesn't prove match:</strong> Mark `[Received all/part of the purchased items]`.</li>
+                                <li><strong>Action:</strong> After marking `[Received all/part...]`, go to Step 2 to check for damage.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Returned Item Damaged / Other Rejection Reasons (Resulting in "Received all/part..." in Step 1):</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Exceptional (User reported quality/defect):</strong> If merchant's damage reason is user's original after-sales reason (quality/defect), then product damage not user's fault. Judge based on remarks/order records.</li>
+                                <li><strong>Exceptional (User reported missing item/accessory):</strong> If merchant's evidence shows missing major component, and user's reason was missing item/accessory. Judge comprehensively.</li>
+                                <li><strong>Scenario:</strong> Merchant received return, item damaged or missing major accessories, affecting secondary sales.</li>
+                                <li><strong>Label as "Number of items affecting resale" IF proven:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li>Signed package genuinely sent by user.</li>
+                                        <li>Item genuinely damaged (detailed photos/videos, e.g., rusted pot).</li>
+                                        <li>Damaged item is part of the order (overall photos).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>If proof doesn't show damage:</strong> Label as "Number of items not affecting resale."</li>
+                                <li><strong>Note:</strong> External packaging damage, minor wheel wear are normal; label as "Number of items not affecting resale."</li>
+                                <li><strong>Exceptional (User reported damage consistent with merchant):</strong> If merchant's damage record matches user's report (damage not user-caused), label as `[number of items not affecting resale]`.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Image Annotation Rules (Local Merchants - CS Follow-up Review):</strong>
+                            <ul class="list-circle pl-5">
+                                <li>New Label: "The merchant's evidence is valid and the pictures displayed to consumers are marked."</li>
+                                <li>When supporting merchant rejection, new labels are added for `[None of the items were received...]` and `[Received all/part...]` (where items affecting resale > 0).</li>
+                                <li><strong>Annotation Options:</strong>
+                                    <ul class="list-square pl-5">
+                                        <li><strong>Valid, suitable for customer display:</strong> Compliant evidence images.</li>
+                                        <li><strong>Valid, not suitable for consumer display:</strong> Compliant but restricted (faces, backend screenshots, Chinese screenshots, logistics screenshots, high rejection rate merchant images, similar image tags).</li>
+                                        <li><strong>Invalid:</strong> Cannot support rejection (sample images, warehouse query pages).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>High-frequency evidence types:</strong> Package shipping label, Logistics tracking website, Product photos, Outer packaging photos.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Rules for Annotating Used Products:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Premise:</strong> Merchant MUST have actual product photos in details. If not, reject merchant.</li>
+                                <li>If merchant's feedback on secondary sales matches actual photos/condition description, it's not consumer's fault. Reject merchant.</li>
+                                <li><strong>Note:</strong> For "item not returned," "correct items sent," "empty package returned," rules are unchanged. Deviation only for `returned items are damaged` or `returned items do not match`. Only Step 2 `[Number of items affecting resale]` is different.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: High Rejection Rate Merchants -->
+                <section id="high-rejection-merchants" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">13. High Rejection Rate Merchants</h3>
+                    <p class="text-gray-700 mb-4"><strong>Background:</strong> For "Local merchants / semi-managed" orders, some merchants deliberately acted maliciously, leading to unreasonable refusal of after-sales service, hence the `[high rejection rate merchant]` label.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Commonalities of such merchants:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Failed to provide a clear and visible return label, making it impossible to prove that the package was indeed returned by the user, and the same evidence was used in multiple cases.</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Reasons involved to reject after-sales services & Features of evidence provided:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Package returned by the user is empty:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>Only one picture of an empty package is provided, but it cannot be proven that it was sent back by the user in the current case.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Returned item does not match:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>Only one return package unboxing video is provided, but the return label information is not clearly visible.</li>
+                                <li>The merchant provided 1 return label and 1 photo of the package after it was opened, but the two cannot be linked.</li>
+                                <li>The merchant provided a return label that was almost brand new and a video of a return package being opened, but the return label in that video was not legible, and the two could not be linked, nor could it be proven that the return was sent by the current user.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Returned item is damaged:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>One picture of a damaged / obviously used product is provided, but it cannot be proven that it was sent back by the current user in this case.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Processing Standards for Annotation Tickets:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>① When the label "high rejection rate merchant" is applied, in the rejection scenarios of "returning an empty package", "returning a mismatched item", and "having already sent the correct item":</strong>
+                            <ul class="list-circle pl-5">
+                                <li>In addition to meeting the evidence requirements listed in the "5.4.2 [Local Merchants] Second Review of Merchant Appeal for Allegedly Missing Items in Returned Goods" under "5. Standards for Evidence", <strong>all of the following conditions must also be met</strong> in order to annotate the case as `[None of the items has been received (or the returned items are not the purchased items)]`; otherwise, it must be annotated as `[All/some of the purchased items have been received]`:
+                                    <ul class="list-square pl-5">
+                                        <li>A clearly visible return label is provided, which matches the "return tracking number" displayed on the workbench.</li>
+                                        <li>It can be proven that the returned items do not match or that the return package is empty, and that this was verified by unpacking the package returned by the user. (The unpacking video must be complete and continuous, with the entire unpacking process visible throughout.)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>② When the label "high return rejection rate merchant" is applied, in the scenario of "Returned item damaged" / other reasons for rejection:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>In addition to meeting the evidence requirements listed in the "5.4.2 [Local Merchants] Second Review of Merchant Appeal for Allegedly Missing Items in Returned Goods" under "5. Standards for Evidence", all of the following conditions must also be met in order to annotate it as `[All / some of the purchased items have been received]`, and fill in the "Number of items that affect resale" and "Number of items that do not affect resale" based on facts. Otherwise, "All / some of the purchased items have been received" and "Number of items that affect resale" should be annotated as 0.
+                                    <ul class="list-square pl-5">
+                                        <li>A clearly visible return label is provided, which matches the "return tracking number" displayed on the workbench.</li>
+                                        <li>It can be proven that the returned items damaged / the returned items affect resale, and that this was verified by unpacking the package returned by the user. (The unpacking video must be complete and continuous, with the entire unpacking process visible throughout.)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Group: Specific Product Category Rules -->
+            <section id="other-product-categories" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Specific Product Category Rules</h2>
+
+                <!-- Rule Section: Used Books -->
+                <section id="used-books" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">8. Used Books</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To assess the return of used books and determine the refund rate based on condition.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
+                    <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Annotate quantity of items affecting/not affecting secondary sales.</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li><strong>Label as `[Number of items affecting resale]` IF proven:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Book Integrity:</strong> Missing pages, damage, stains, writing, tearing that affect reading. Missing attachments (CDs, bookmarks).</li>
+                                <li><strong>Book Condition:</strong> Obvious creases/damage/stains on cover/spine. Severely yellowed, moldy, or insect-eaten inner pages.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Note:</strong> If merchant rejects due to damage, and user's reason was `[quality issues/product defects]` or `[missing items/accessories]`, and chat record confirms, annotate `[Number of items not affecting resale]`.</li>
+                    </ul>
+
+                    <!-- Used Books Refund Calculator -->
+                    <div class="calculator-section p-6 border rounded-lg shadow-inner bg-gray-50">
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Used Books Refund Calculator</h4>
+                        <div id="usedBooksItemsContainer">
+                            <!-- Initial item will be added by JS -->
+                        </div>
+                        <button id="addUsedBookItem" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 mt-4">Add Another Book</button>
+                        <div class="mt-4">
+                            <label for="totalBooksInReturn" class="block text-sm font-medium text-gray-700">Total Books in Return Request (for overall average):</label>
+                            <input type="number" id="totalBooksInReturn" value="1" min="1" class="calculator-input mt-1">
+                        </div>
+                        <button id="calculateUsedBooks" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-lg font-bold shadow-md">Calculate Refund</button>
+                        <p class="mt-4 text-xl font-bold text-gray-900">Calculated Refund Percentage: <span id="usedBooksResult" class="text-indigo-700">0%</span></p>
+                    </div>
+                </section>
+
+                <!-- Rule Section: Used 3C Electronic Products -->
+                <section id="used-3c-electronics" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">9. Used 3C Electronic Products</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To assess the return of used 3C electronic products and determine the refund rate based on condition.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
+                    <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Annotate quantity of items affecting/not affecting secondary sales.</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li><strong>Label as `[Number of items affecting resale]` IF proven:</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Product Appearance:</strong> Extensive damage, deformation, broken screen.</li>
+                                <li><strong>Accessories:</strong> Important accessories missing (power adapter, remote control).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Note:</strong> If merchant rejects due to damage, and user's reason was `[quality issue/product defect]` or `[missing items/accessories]`, and chat record confirms, annotate `[Number of items affecting resale]`.</li>
+                    </ul>
+
+                    <!-- Used 3C Refund Calculator -->
+                    <div class="calculator-section p-6 border rounded-lg shadow-inner bg-gray-50">
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Used 3C Electronic Products Refund Calculator</h4>
+                        <div id="used3CItemsContainer">
+                            <!-- Initial item will be added by JS -->
+                        </div>
+                        <button id="addUsed3CItem" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 mt-4">Add Another 3C Item</button>
+                        <div class="mt-4">
+                            <label for="total3CInReturn" class="block text-sm font-medium text-gray-700">Total 3C Items in Return Request (for overall average):</label>
+                            <input type="number" id="total3CInReturn" value="1" min="1" class="calculator-input mt-1">
+                        </div>
+                        <button id="calculateUsed3C" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-lg font-bold shadow-md">Calculate Refund</button>
+                        <p class="mt-4 text-xl font-bold text-gray-900">Calculated Refund Percentage: <span id="used3CResult" class="text-indigo-700">0%</span></p>
+                    </div>
+                </section>
+
+                <!-- Rule Section: Used iPhone -->
+                <section id="used-iphone" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">10. Used iPhone</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To assess the return of used iPhones and determine the refund rate based on condition and specific issues.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
+                    <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Indicate number of items affecting/not affecting resale.</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li><strong>Prerequisites:</strong> Merchant must have real photos in product details (else, reject merchant). If merchant's resale issue matches real photos/condition, not customer's responsibility (reject merchant).</li>
+                        <li><strong>Use `[Number of items affecting resale]` label IF video proves:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>Already activated.</li>
+                                <li>iCloud account not logged out, used with obvious signs of use, damaged/non-functioning parts, disassembled and returned.</li>
+                                <li>No cable or returned in non-original packaging.</li>
+                                <li>Phone activated.</li>
+                                <li>Returned phone's serial number doesn't match original order (not original device).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Used iPhone Refund Calculator -->
+                    <div class="calculator-section p-6 border rounded-lg shadow-inner bg-gray-50">
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Used iPhone Refund Calculator</h4>
+                        <div id="usediPhoneItemsContainer">
+                            <!-- Initial item will be added by JS -->
+                        </div>
+                        <button id="addUsediPhoneItem" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 mt-4">Add Another iPhone</button>
+                        <div class="mt-4">
+                            <label for="totaliPhonesInReturn" class="block text-sm font-medium text-gray-700">Total iPhones in Return Request (for overall average):</label>
+                            <input type="number" id="totaliPhonesInReturn" value="1" min="1" class="calculator-input mt-1">
+                        </div>
+                        <button id="calculateUsediPhone" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-lg font-bold shadow-md">Calculate Refund</button>
+                        <p class="mt-4 text-xl font-bold text-gray-900">Calculated Refund Percentage: <span id="usediPhoneResult" class="text-indigo-700">0%</span></p>
+                    </div>
+                </section>
+
+                <!-- Rule Section: Brand New 3C Products -->
+                <section id="brand-new-3c" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">11. Brand New 3C Products</h3>
+                    <p class="text-gray-700 mb-4"><strong>Purpose:</strong> To assess the return of brand new 3C products and determine the refund rate based on specific conditions affecting their "new" status.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
+                    <p class="text-gray-700 mb-2"><strong>Step 2 (for Returned Items):</strong> Annotate number of items affecting/not affecting resale.</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li><strong>Label corresponding items with "Number of items affecting resale" IF video evidence confirms:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>Box seal removed.</li>
+                                <li>Minor scratches on screen or body.</li>
+                                <li>Screen/device severely damaged, cannot power on.</li>
+                                <li>Phone activated.</li>
+                                <li>Original branded packaging box crushed/damaged/missing.</li>
+                                <li>Accessories severely damaged or missing (earphones, remotes, chargers, data cables, power cords, protective cases, TV stands).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Note:</strong> For damaged/missing accessories, verify list on product details page or seller's instructions.</li>
+                    </ul>
+
+                    <!-- Brand New 3C Refund Calculator -->
+                    <div class="calculator-section p-6 border rounded-lg shadow-inner bg-gray-50">
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Brand New 3C Products Refund Calculator</h4>
+                        <div id="brandNew3CItemsContainer">
+                            <!-- Initial item will be added by JS -->
+                        </div>
+                        <button id="addBrandNew3CItem" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 mt-4">Add Another New 3C Item</button>
+                        <div class="mt-4">
+                            <label for="totalBrandNew3CInReturn" class="block text-sm font-medium text-gray-700">Total Brand New 3C Items in Return Request (for overall average):</label>
+                            <input type="number" id="totalBrandNew3CInReturn" value="1" min="1" class="calculator-input mt-1">
+                        </div>
+                        <button id="calculateBrandNew3C" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-lg font-bold shadow-md">Calculate Refund</button>
+                        <p class="mt-4 text-xl font-bold text-gray-900">Calculated Refund Percentage: <span id="brandNew3CResult" class="text-indigo-700">0%</span></p>
+                    </div>
+                </section>
+
+                <!-- Rule Section: High-Value Electronic Consumer Goods (with SN code) -->
+                <section id="high-value-electronics-sn" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">12. High-Value Electronic Consumer Goods (with SN code) Review Process</h3>
+                    <p class="text-gray-700 mb-4"><strong>Background:</strong> Addresses issues with users returning high-value items with mismatched SN codes. (How to determine if it is an SN code product? -> There is an "SN code product" label under the item name.)</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Merchant Evidence Requirements:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Merchants must provide both types of evidence materials for shipment and return (both are indispensable).</li>
+                        <li>The merchant's reason for rejection is: <strong>The returned product does not match!</strong> (Other rejection reasons will be handled as usual).</li>
+                        <li>Both the proof of shipping and return need to be provided simultaneously.</li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Requirements for Supporting Documents:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Proof of Shipping:</strong> Accepted if any one of the following conditions is met:
+                            <ul class="list-circle pl-5">
+                                <li>The shipping outer packaging information: The shipping label and SN code must be clearly visible at the same time.</li>
+                                <li>The return outer packaging information: The shipping label and SN code must be clearly seen at the same time. (The shipping label and SN code must be on the same page.)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Proof of Return:</strong> Must meet the following conditions simultaneously:
+                            <ul class="list-circle pl-5">
+                                <li>Returned outer packaging information: The return shipping label must be clearly visible.</li>
+                                <li>A complete video of the machine being taken out of the packaging, and the machine's serial number can be clearly seen.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2 mt-4">Review Requirements for Customer Service:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>When the user returns the item in a non-original packaging box/returns the product in the original packaging box but the shipping label information and SN code cannot be verified:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If the following four points can be proved, annotate as follows: `[All items have not been received (or none of the returned items are the purchased items)]`, otherwise annotate as `[Received all/part of the purchased items]`:
+                                    <ul class="list-square pl-5">
+                                        <li>The shipping package tracking number and the PO details match.</li>
+                                        <li>The shipping tracking number and the SN code are displayed on the same page.</li>
+                                        <li>The return package tracking number and the PO details match.</li>
+                                        <li>In the complete video of the machine being taken out of the packaging, the SN code on the machine body can be seen, and the SN code <strong>does not match</strong> the SN code on the shipping outer packaging/the SN code on the package tracking system.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>When the user returns the item in the original packaging, and all the shipping information is retained (the shipping label, SN code, etc):</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If the following four points can be proved, annotate as follows: `[All items have not been received (or none of the returned items are the purchased items)]`, otherwise annotate as `[Received all/part of the purchased items]`. (If they provide the original package as their supporting documents, it can be used as a reference also.)
+                                    <ul class="list-square pl-5">
+                                        <li>The complete video of the machine being taken out of the packaging (the video should include the shipping label, return label, outer packaging SN code, and machine SN code).</li>
+                                        <li>The shipping package tracking number and the PO details match.</li>
+                                        <li>The return package tracking number and the PO details match.</li>
+                                        <li>The SN code on the machine <strong>does not match</strong> the SN code on the shipping outer packaging.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Rule Section: Precious Metal Goods -->
+                <section id="precious-metal-goods" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">14. Precious Metal Goods</h3>
+                    <p class="text-gray-700 mb-4"><strong>Background:</strong> For precious metal goods return and refund, due to their high value, the annotation process needs to be modified. And customer service are allowed to manually enter the refund percentage.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Annotation & Evidence:</h4>
+                    <p class="text-gray-700 mb-2"><strong>Step 2:</strong> If it is confirmed that all/some of the items purchased in the order have been returned, please further annotate the quantity of items received by the warehouse that affect/do not affect secondary sales.</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li><strong>Anything that can be proven is marked as `[Number of items affecting resale]`</strong> (e.g., Certificate lost, Minor damage - scratches, Severe damage - bent or broken, Weight reduced).</li>
+                        <li><strong>Note:</strong> If merchant rejects due to damage, and user's reason was `[quality issue/product defect]/[missing items/accessories]`, and chat record confirms, mark as `[Number of items not affecting resale]`.</li>
+                    </ul>
+
+                    <!-- Precious Metal Goods Refund Calculator -->
+                    <div class="calculator-section p-6 border rounded-lg shadow-inner bg-gray-50">
+                        <h4 class="text-xl font-bold mb-4 text-gray-800">Precious Metal Goods Refund Calculator</h4>
+                        <div id="preciousMetalItemsContainer">
+                            <!-- Initial item will be added by JS -->
+                        </div>
+                        <button id="addPreciousMetalItem" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 mt-4">Add Another Item</button>
+                        <div class="mt-4">
+                            <label for="totalPreciousMetalInReturn" class="block text-sm font-medium text-gray-700">Total Precious Metal Items in Return Request (for overall average):</label>
+                            <input type="number" id="totalPreciousMetalInReturn" value="1" min="1" class="calculator-input mt-1">
+                        </div>
+                        <button id="calculatePreciousMetal" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-200 text-lg font-bold shadow-md">Calculate Refund</button>
+                        <p class="mt-4 text-xl font-bold text-gray-900">Calculated Refund Percentage: <span id="preciousMetalResult" class="text-indigo-700">0%</span></p>
+                    </div>
+                </section>
+
+                <!-- Rule Section: Wig Seller Rules -->
+                <section id="wig-seller-rules" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">15. Wig Seller Rules</h3>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Step 1: Check Mall ID:</strong>
+                            <ul class="list-circle pl-5">
+                                <li>If Mall ID is 634418217066498, 634418216283083, 634418214716867, or 634418216177352, proceed to Step 2.</li>
+                                <li>If not, handle according to the standard process.</li>
+                                <li>If seller has "Merchants with high rejection rate" label, proceed to Step 2 as well.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Step 2: Check User Tier (Risk Level):</strong>
+                            <ul class="list-circle pl-5">
+                                <li><strong>Support High-Tier Customers:</strong> If user is C3-C5, or C1-C2 but passes risk control, mark "Received all/part of purchased items" & "Resale unaffected" and approve refund.</li>
+                                <li><strong>Reject Request:</strong> If user is C1-C2 and fails risk control.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Smooth scrolling for category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('searchButton').addEventListener('click', performSearch);
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+            let found = false;
+
+            for (const section of sections) {
+                const sectionText = section.textContent.toLowerCase();
+                if (sectionText.includes(query)) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                // Simple alert for now, could be a custom modal
+                alert('No matching section found.');
+            }
+        }
+
+        // --- Refund Calculators ---
+
+        // Helper function to create checkbox input
+        function createCheckbox(id, value, labelText, percentage) {
+            const div = document.createElement('div');
+            div.className = 'flex items-center mb-2';
+            const input = document.createElement('input');
+            input.type = 'checkbox';
+            input.id = id;
+            input.value = value;
+            input.className = 'calculator-checkbox h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500';
+            const label = document.createElement('label');
+            label.htmlFor = id;
+            label.className = 'ml-2 block text-sm text-gray-900';
+            label.textContent = `${labelText} (${percentage}%)`;
+            div.appendChild(input);
+            div.appendChild(label);
+            return div;
+        }
+
+        // Helper function to add an item container for calculators
+        function addItemContainer(containerId, itemIndex, conditions) {
+            const container = document.getElementById(containerId);
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item-conditions p-4 border rounded-lg mb-4 bg-white shadow-sm';
+            itemDiv.innerHTML = `<h4 class="font-semibold mb-3 text-gray-800">Item ${itemIndex} Conditions:</h4>`;
+
+            const conditionsDiv = document.createElement('div');
+            conditionsDiv.className = 'grid grid-cols-1 md:grid-cols-2 gap-2';
+
+            for (const cond of conditions) {
+                conditionsDiv.appendChild(createCheckbox(`${containerId}-item${itemIndex}-${cond.id}`, cond.value, cond.label, cond.percentage));
+            }
+            itemDiv.appendChild(conditionsDiv);
+            container.appendChild(itemDiv);
+        }
+
+        // --- Used Books Calculator ---
+        const usedBooksConditions = [
+            { id: 'damagedCover', label: 'Damaged, torn, or stained cover/back cover', percentage: 95 },
+            { id: 'brokenSpine', label: 'Broken and severely deformed spine', percentage: 80 },
+            { id: 'missingPages', label: 'Missing pages, damage, stains, writing, or tearing in interior pages', percentage: 75 },
+            { id: 'missingAttachment', label: 'Attachment (CD/DVD/bookmark) missing', percentage: 90 },
+            { id: 'looseBinding', label: 'Loose binding, with pages falling out or scattered', percentage: 75 }
+        ];
+
+        let usedBookItemCount = 0;
+        function addUsedBookItem() {
+            usedBookItemCount++;
+            addItemContainer('usedBooksItemsContainer', usedBookItemCount, usedBooksConditions);
+        }
+
+        document.getElementById('addUsedBookItem').addEventListener('click', addUsedBookItem);
+        document.getElementById('calculateUsedBooks').addEventListener('click', calculateUsedBooksRefund);
+
+        // Add initial item on load
+        addUsedBookItem();
+
+        function calculateUsedBooksRefund() {
+            const itemRefunds = [];
+            for (let i = 1; i <= usedBookItemCount; i++) {
+                let selectedConditions = [];
+                for (const cond of usedBooksConditions) {
+                    const checkbox = document.getElementById(`usedBooksItemsContainer-item${i}-${cond.id}`);
+                    if (checkbox && checkbox.checked) {
+                        selectedConditions.push(cond.percentage);
+                    }
+                }
+
+                if (selectedConditions.length > 0) {
+                    const itemAverage = selectedConditions.reduce((sum, val) => sum + val, 0) / selectedConditions.length;
+                    itemRefunds.push(itemAverage);
+                } else {
+                    // If no conditions selected for an item, it means no damage, so 100% refund
+                    itemRefunds.push(100);
+                }
+            }
+
+            const totalBooksInReturn = parseInt(document.getElementById('totalBooksInReturn').value);
+            let finalRefundPercentage = 0;
+
+            if (itemRefunds.length > 0) {
+                const sumOfItemRefunds = itemRefunds.reduce((sum, val) => sum + val, 0);
+                // The example shows (80%+95%)/2 = 87.5% for 2 affected items, then rounded.
+                // This implies averaging only among the *affected* items, then applying that average to the total.
+                // The rule says "refund rate for N items affecting secondary sales".
+                // If N is the number of items for which conditions were selected (itemRefunds.length),
+                // and the totalBooksInReturn is the total in the request.
+                // We should average the *affected* items and then apply that average to the total.
+                // The example [(80%+95%)/2=87.5%] is for the *two items that ultimately affected the resale*.
+                // So, we average the percentages of the *affected* items.
+                finalRefundPercentage = sumOfItemRefunds / itemRefunds.length;
+
+                // If the number of affected items is less than total books in return,
+                // we assume the unaffected ones get 100% refund.
+                // This part of the rule is a bit ambiguous: "number of items affecting secondary sales + number of items not affecting secondary sales ＜ number of items requested for refund in sub-order"
+                // The refund calculation logic "The refund rate for the two items that ultimately affected the resale is annotated as 88% [(80%+95%)/2=87.5%]"
+                // This implies the calculation is *only* for the items that were affected.
+                // Let's stick to the example: average of affected items.
+            } else {
+                finalRefundPercentage = 100; // No conditions selected, so full refund
+            }
+
+            // Round to nearest integer as per rule
+            document.getElementById('usedBooksResult').textContent = `${Math.round(finalRefundPercentage)}%`;
+        }
+
+
+        // --- Used 3C Electronic Products Calculator ---
+        const used3CConditions = [
+            { id: 'extensiveDamage', label: 'Extensive damage, deformation, broken screen', percentageLikeNew: 70, percentageVeryGood: 70, percentageGood: 80, percentageAcceptable: 80 },
+            { id: 'missingAccessories', label: 'Missing important accessories (up to $20)', percentageLikeNew: 80, percentageVeryGood: 80, percentageGood: 80, percentageAcceptable: 80 }
+        ];
+        const used3CConditionTypes = ['Like New', 'Very Good', 'Good', 'Acceptable'];
+
+        let used3CItemCount = 0;
+        function addUsed3CItem() {
+            used3CItemCount++;
+            const container = document.getElementById('used3CItemsContainer');
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item-conditions p-4 border rounded-lg mb-4 bg-white shadow-sm';
+            itemDiv.innerHTML = `<h4 class="font-semibold mb-3 text-gray-800">Item ${used3CItemCount} Conditions:</h4>`;
+
+            const conditionTypeSelect = document.createElement('select');
+            conditionTypeSelect.id = `used3CItemsContainer-item${used3CItemCount}-type`;
+            conditionTypeSelect.className = 'calculator-input mb-3';
+            used3CConditionTypes.forEach(type => {
+                const option = document.createElement('option');
+                option.value = type.replace(/\s/g, ''); // Remove spaces for ID/value
+                option.textContent = type;
+                conditionTypeSelect.appendChild(option);
+            });
+            itemDiv.appendChild(conditionTypeSelect);
+
+            const conditionsDiv = document.createElement('div');
+            conditionsDiv.className = 'grid grid-cols-1 md:grid-cols-2 gap-2';
+
+            used3CConditions.forEach(cond => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center mb-2';
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = `used3CItemsContainer-item${used3CItemCount}-${cond.id}`;
+                input.value = cond.id;
+                input.className = 'calculator-checkbox h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500';
+                const label = document.createElement('label');
+                label.htmlFor = `used3CItemsContainer-item${used3CItemCount}-${cond.id}`;
+                label.className = 'ml-2 block text-sm text-gray-900';
+                label.textContent = cond.label; // Percentage will be dynamic based on type
+                div.appendChild(input);
+                div.appendChild(label);
+                conditionsDiv.appendChild(div);
+            });
+            itemDiv.appendChild(conditionsDiv);
+            container.appendChild(itemDiv);
+        }
+
+        document.getElementById('addUsed3CItem').addEventListener('click', addUsed3CItem);
+        document.getElementById('calculateUsed3C').addEventListener('click', calculateUsed3CRefund);
+
+        addUsed3CItem(); // Add initial item on load
+
+        function calculateUsed3CRefund() {
+            const itemRefunds = [];
+            for (let i = 1; i <= used3CItemCount; i++) {
+                const selectedType = document.getElementById(`used3CItemsContainer-item${i}-type`).value;
+                let selectedConditionsPercentages = [];
+
+                used3CConditions.forEach(cond => {
+                    const checkbox = document.getElementById(`used3CItemsContainer-item${i}-${cond.id}`);
+                    if (checkbox && checkbox.checked) {
+                        // Dynamically get percentage based on selected type
+                        const percentageKey = `percentage${selectedType}`;
+                        if (cond[percentageKey] !== undefined) {
+                            selectedConditionsPercentages.push(cond[percentageKey]);
+                        }
+                    }
+                });
+
+                if (selectedConditionsPercentages.length > 0) {
+                    const itemAverage = selectedConditionsPercentages.reduce((sum, val) => sum + val, 0) / selectedConditionsPercentages.length;
+                    itemRefunds.push(itemAverage);
+                } else {
+                    itemRefunds.push(100); // No conditions selected, so full refund for this item
+                }
+            }
+
+            let finalRefundPercentage = 0;
+            if (itemRefunds.length > 0) {
+                const sumOfItemRefunds = itemRefunds.reduce((sum, val) => sum + val, 0);
+                finalRefundPercentage = sumOfItemRefunds / itemRefunds.length;
+            } else {
+                finalRefundPercentage = 100;
+            }
+
+            document.getElementById('used3CResult').textContent = `${Math.round(finalRefundPercentage)}%`;
+        }
+
+
+        // --- Used iPhone Calculator ---
+        const usediPhoneConditions = [
+            { id: 'activated', label: 'Already activated', percentage: 80 },
+            { id: 'iCloudNotSignedOut', label: 'iCloud account not logged out / used with obvious signs of use / damaged parts / disassembled', percentage: 20 },
+            { id: 'noCableNonOriginalPackaging', label: 'No cable or returned in non-original packaging', percentage: 95 },
+            { id: 'activatedNoCable', label: 'Phone activated & no cable or returned in non-original packaging', percentage: 75 },
+            { id: 'serialNumberMismatch', label: 'Returned phone\'s serial number does not match original order (not original device)', percentage: 0 },
+            { id: 'iCloudCannotResell', label: 'iCloud account not signed out / phone cannot be unlocked, making it impossible to resell', percentage: 0 }
+        ];
+
+        let usediPhoneItemCount = 0;
+        function addUsediPhoneItem() {
+            usediPhoneItemCount++;
+            addItemContainer('usediPhoneItemsContainer', usediPhoneItemCount, usediPhoneConditions);
+        }
+
+        document.getElementById('addUsediPhoneItem').addEventListener('click', addUsediPhoneItem);
+        document.getElementById('calculateUsediPhone').addEventListener('click', calculateUsediPhoneRefund);
+
+        addUsediPhoneItem(); // Add initial item on load
+
+        function calculateUsediPhoneRefund() {
+            const itemRefunds = [];
+            for (let i = 1; i <= usediPhoneItemCount; i++) {
+                let selectedConditions = [];
+                for (const cond of usediPhoneConditions) {
+                    const checkbox = document.getElementById(`usediPhoneItemsContainer-item${i}-${cond.id}`);
+                    if (checkbox && checkbox.checked) {
+                        selectedConditions.push(cond.percentage);
+                    }
+                }
+
+                if (selectedConditions.length > 0) {
+                    const itemAverage = selectedConditions.reduce((sum, val) => sum + val, 0) / selectedConditions.length;
+                    itemRefunds.push(itemAverage);
+                } else {
+                    itemRefunds.push(100);
+                }
+            }
+
+            let finalRefundPercentage = 0;
+            if (itemRefunds.length > 0) {
+                const sumOfItemRefunds = itemRefunds.reduce((sum, val) => sum + val, 0);
+                finalRefundPercentage = sumOfItemRefunds / itemRefunds.length;
+            } else {
+                finalRefundPercentage = 100;
+            }
+
+            document.getElementById('usediPhoneResult').textContent = `${Math.round(finalRefundPercentage)}%`;
+        }
+
+        // --- Brand New 3C Products Calculator ---
+        const brandNew3CConditions = [
+            { id: 'boxSealRemoved', label: 'The box seal has been removed', percentage: 90 },
+            { id: 'minorScratches', label: 'Minor scratches on the screen or body', percentage: 80 },
+            { id: 'screenCrackedPowerOn', label: 'The screen is visibly cracked and the device is clearly damaged, but it can still be powered on', percentage: 50 },
+            { id: 'severelyDamagedNoPower', label: 'The screen or device is severely damaged and cannot be powered on', percentage: 0 },
+            { id: 'phoneActivated', label: 'The phone or other electronic device has already been activated', percentage: 80 },
+            { id: 'originalPackagingDamaged', label: 'The product\'s original branded packaging box is visibly crushed, damaged, or missing (max $25 deduction)', percentage: 90 },
+            { id: 'accessoriesDamagedMissing', label: 'Accessories are severely damaged or missing (max $20 deduction)', percentage: 80 }
+        ];
+
+        let brandNew3CItemCount = 0;
+        function addBrandNew3CItem() {
+            brandNew3CItemCount++;
+            addItemContainer('brandNew3CItemsContainer', brandNew3CItemCount, brandNew3CConditions);
+        }
+
+        document.getElementById('addBrandNew3CItem').addEventListener('click', addBrandNew3CItem);
+        document.getElementById('calculateBrandNew3C').addEventListener('click', calculateBrandNew3CRefund);
+
+        addBrandNew3CItem(); // Add initial item on load
+
+        function calculateBrandNew3CRefund() {
+            const itemRefunds = [];
+            for (let i = 1; i <= brandNew3CItemCount; i++) {
+                let selectedConditions = [];
+                for (const cond of brandNew3CConditions) {
+                    const checkbox = document.getElementById(`brandNew3CItemsContainer-item${i}-${cond.id}`);
+                    if (checkbox && checkbox.checked) {
+                        selectedConditions.push(cond.percentage);
+                    }
+                }
+
+                if (selectedConditions.length > 0) {
+                    const itemAverage = selectedConditions.reduce((sum, val) => sum + val, 0) / selectedConditions.length;
+                    itemRefunds.push(itemAverage);
+                } else {
+                    itemRefunds.push(100);
+                }
+            }
+
+            let finalRefundPercentage = 0;
+            if (itemRefunds.length > 0) {
+                const sumOfItemRefunds = itemRefunds.reduce((sum, val) => sum + val, 0);
+                finalRefundPercentage = sumOfItemRefunds / itemRefunds.length;
+            } else {
+                finalRefundPercentage = 100;
+            }
+
+            document.getElementById('brandNew3CResult').textContent = `${Math.round(finalRefundPercentage)}%`;
+        }
+
+        // --- Precious Metal Goods Calculator ---
+        const preciousMetalConditions = [
+            { id: 'certificateLost', label: 'Certificate lost', percentage: 90 },
+            { id: 'minorDamage', label: 'Minor damage - scratches, slight bending', percentage: 90 },
+            { id: 'severeDamage', label: 'Severely damaged - bent, broken', percentage: 70 },
+        ];
+
+        let preciousMetalItemCount = 0;
+        function addPreciousMetalItem() {
+            preciousMetalItemCount++;
+            const container = document.getElementById('preciousMetalItemsContainer');
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item-conditions p-4 border rounded-lg mb-4 bg-white shadow-sm';
+            itemDiv.innerHTML = `<h4 class="font-semibold mb-3 text-gray-800">Item ${preciousMetalItemCount} Conditions:</h4>`;
+
+            const conditionsDiv = document.createElement('div');
+            conditionsDiv.className = 'grid grid-cols-1 md:grid-cols-2 gap-2';
+
+            preciousMetalConditions.forEach(cond => {
+                conditionsDiv.appendChild(createCheckbox(`preciousMetalItemsContainer-item${preciousMetalItemCount}-${cond.id}`, cond.id, cond.label, cond.percentage));
+            });
+            itemDiv.appendChild(conditionsDiv);
+
+            // Weight Reduction input
+            const weightDiv = document.createElement('div');
+            weightDiv.className = 'mt-3';
+            weightDiv.innerHTML = `
+                <label for="preciousMetalWeightReduced-${preciousMetalItemCount}" class="block text-sm font-medium text-gray-700">Weight Reduced (%):</label>
+                <input type="number" id="preciousMetalWeightReduced-${preciousMetalItemCount}" value="0" min="0" max="100" class="calculator-input mt-1">
+                <p class="text-xs text-gray-500 mt-1">Note: Change in weight less than 0.1 gram can be ignored.</p>
+            `;
+            itemDiv.appendChild(weightDiv);
+
+            container.appendChild(itemDiv);
+        }
+
+        document.getElementById('addPreciousMetalItem').addEventListener('click', addPreciousMetalItem);
+        document.getElementById('calculatePreciousMetal').addEventListener('click', calculatePreciousMetalRefund);
+
+        addPreciousMetalItem(); // Add initial item on load
+
+        function calculatePreciousMetalRefund() {
+            const itemRefunds = [];
+            for (let i = 1; i <= preciousMetalItemCount; i++) {
+                let selectedConditionsPercentages = [];
+                for (const cond of preciousMetalConditions) {
+                    const checkbox = document.getElementById(`preciousMetalItemsContainer-item${i}-${cond.id}`);
+                    if (checkbox && checkbox.checked) {
+                        selectedConditionsPercentages.push(cond.percentage);
+                    }
+                }
+
+                let itemBaseRefund = 100;
+                if (selectedConditionsPercentages.length > 0) {
+                    // "If multiple scenarios occur, percentages can be calculated cumulatively."
+                    // The example: one item missing certificate (90%) and scratches (90%) = 81% [90% * 90%]
+                    // This implies multiplication for multiple conditions on a single item.
+                    itemBaseRefund = selectedConditionsPercentages.reduce((product, val) => product * (val / 100), 1) * 100;
+                }
+
+                const weightReduced = parseFloat(document.getElementById(`preciousMetalWeightReduced-${i}`).value);
+                let weightFactor = 1;
+                if (weightReduced > 0.1) { // Rule: "The change in weight is less than 0.1 gram and can be ignored."
+                    weightFactor = (100 - weightReduced) / 100; // If 30% reduction, factor is 0.7
+                }
+
+                // Final refund ratio = (weight of returned goods / original weight of goods) % * refund ratio for each reason.
+                // This means itemBaseRefund * weightFactor.
+                const finalItemRefund = itemBaseRefund * weightFactor;
+                itemRefunds.push(finalItemRefund);
+            }
+
+            let finalRefundPercentage = 0;
+            if (itemRefunds.length > 0) {
+                const sumOfItemRefunds = itemRefunds.reduce((sum, val) => sum + val, 0);
+                finalRefundPercentage = sumOfItemRefunds / itemRefunds.length;
+            } else {
+                finalRefundPercentage = 100;
+            }
+
+            document.getElementById('preciousMetalResult').textContent = `${Math.round(finalRefundPercentage)}%`;
+        }
+
+    </script>
+</body>
+</html>
