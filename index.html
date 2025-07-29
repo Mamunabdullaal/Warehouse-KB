@@ -98,7 +98,6 @@
                 <li><a href="#wrong-package-group" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Wrong Package Handling</a></li>
                 <ul class="list-disc pl-5 space-y-1">
                     <li><a href="#wrong-package-external" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">2. Wrong Package Second Review - External</a></li>
-                    <!-- Removed 4.2. Wrong Package Processing Procedure from here -->
                     <li><a href="#processing-rules-labels" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">5. Processing Rules (Labels)</a></li>
                 </ul>
                 <li><a href="#local-merchant-group" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Local Merchant & General Return Rules</a></li>
@@ -117,6 +116,11 @@
                     <li><a href="#high-value-electronics-sn" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">12. High-Value Electronics (SN Code)</a></li>
                     <li><a href="#precious-metal-goods" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">14. Precious Metal Goods</a></li>
                     <li><a href="#wig-seller-rules" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">15. Wig Seller Rules</a></li>
+                </ul>
+                <li><a href="#advanced-review-procedures" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150 font-bold">Advanced Review Procedures</a></li>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><a href="#chargeback-reversal-proof" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">Image Proof for Chargeback Reversal</a></li>
+                    <li><a href="#self-return-logistics" class="block p-2 rounded-md text-gray-700 nav-link transition-colors duration-150">Self-Return - Logistics Exception</a></li>
                 </ul>
             </ul>
         </nav>
@@ -799,6 +803,150 @@
                             <ul class="list-circle pl-5">
                                 <li><span class="action-point">Support High-Tier Customers:</span> If user is C3-C5, or C1-C2 but passes risk control, mark "Received all/part of purchased items" & "Resale unaffected" and approve refund.</li>
                                 <li><span class="important-point">Reject Request:</span> If user is C1-C2 and fails risk control.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Group: Advanced Review Procedures -->
+            <section id="advanced-review-procedures" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Advanced Review Procedures</h2>
+
+                <!-- New Rule Section: Image Proof for Chargeback Reversal -->
+                <section id="chargeback-reversal-proof" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Image Proof for Chargeback Reversal — Customer Service Review</h3>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><span class="sub-heading">Step 1: Determine whether the image is a bank-issued document.</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">If the image is verified as a document issued by a bank or financial institution:</span> Select <span class="highlight-bg">"It is a bank document"</span>.</li>
+                                <li><span class="important-point">If not:</span> Select <span class="highlight-bg">"It is not a bank document"</span>.</li>
+                                <li><span class="sub-heading">Check Point:</span> The image clearly shows that it is issued by a bank or financial institution.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 2: Does the image indicate that the chargeback has been reversed or failed?</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">If the image clearly shows the outcome (e.g., chargeback has been reversed, closed, or failed):</span> Select <span class="highlight-bg">"Chargeback reversal or failure shown"</span>.</li>
+                                <li><span class="important-point">If the image does not show the outcome:</span> Select <span class="highlight-bg">"Chargeback reversal or failure not shown"</span>.</li>
+                                <li><span class="sub-heading">Common Phrases:</span>
+                                    <ul class="list-square pl-5">
+                                        <li><span class="action-point">Chargeback Reversed:</span> Look for phrases such as "Chargeback Withdrawn", "Chargeback Cancelled", or "Dispute Cancelled".</li>
+                                        <li><span class="action-point">Chargeback Failed:</span> Look for phrases such as "Chargeback Representment Successful", "Dispute Ruled in Merchant's Favor", or "Dispute Lost by Cardholder".</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 3: Does the image show signs of forgery (such as editing marks or images taken from the internet)?</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">If there are no obvious signs of forgery:</span> Select <span class="highlight-bg">"Signs of forgery not found"</span>.</li>
+                                <li><span class="important-point">If the uploaded image is clearly a non-genuine photo from the internet or shows obvious Photoshop marks:</span> Select <span class="highlight-bg">"Signs of forgery found"</span>.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 4: Is the chargeback amount in the image less than or equal to the payment amount?</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="sub-heading">Check Point:</span> Customer service should compare the chargeback amount in the image with the user's actual payment amount.</li>
+                                <li><span class="action-point">If the chargeback amount is less than or equal to the payment amount:</span> Select <span class="highlight-bg">"Chargeback amount less than or equal to payment amount"</span>.</li>
+                                <li><span class="important-point">If it is greater than the payment amount, or the payment amount is not shown in the image:</span> Select <span class="highlight-bg">"Chargeback amount greater than payment amount"</span>.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 5: Is the chargeback time in the image later than the payment time?</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="sub-heading">Check Point:</span> Customer service should compare the chargeback date in the image with the user's actual payment date.</li>
+                                <li><span class="action-point">If the chargeback date is later than or equal to the payment date:</span> Select <span class="highlight-bg">"Chargeback later than or concurring with payment"</span>.</li>
+                                <li><span class="important-point">If it is earlier:</span> Select <span class="highlight-bg">"Chargeback earlier than payment"</span>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- New Rule Section: Return and refund by self-return - Logistics exception -->
+                <section id="self-return-logistics" class="mb-10 p-6 border-b border-gray-200 section-anchor">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Return and refund by self-return - Logistics exception</h3>
+                    <p class="text-gray-700 mb-4">The merchant has declined the refund request and submitted proof.</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><span class="sub-heading">Step 1: Compare the tracking number provided by the user with the one submitted by the merchant:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If the tracking numbers match:</span> Proceed to Step 2.</li>
+                                <li><span class="important-point">b. If the tracking numbers do not match:</span> <span class="highlight-bg">Reject the merchant</span>.</li>
+                                <li><span class="sub-heading">Check Point:</span> Check whether the tracking number provided by the merchant on the logistics website matches the return tracking number shown in the Workbench.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 2: Check whether the tracking number provided by the user has been used previously:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If the tracking number has been used:</span> <span class="highlight-bg">Support the merchant</span>.</li>
+                                <li><span class="important-point">b. If the tracking number has not been used:</span> Proceed to Step 3.</li>
+                                <li><span class="sub-heading">Proof Requirements:</span>
+                                    <ul class="list-square pl-5">
+                                        <li>The merchant must provide a full screenshot of the official logistics tracking page, with all text clearly visible. The tracking number must be included in the image.</li>
+                                        <li>The merchant must also provide a full screenshot of the after-sales request details page showing the same tracking number. The content must be clear and legible.</li>
+                                    </ul>
+                                </li>
+                                <li><span class="sub-heading">Check Point:</span> You should then check whether the same tracking number is used for different orders.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 3: Check in the tracking information if the package is marked as delivered:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If delivered:</span> Proceed to Step 6.</li>
+                                <li><span class="important-point">b. If not delivered:</span> Proceed to Step 4.</li>
+                                <li><span class="sub-heading">Check Point:</span> Check the tracking status to see if the package has been delivered.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 4: Check in the tracking information if the package has not been picked up or shows no further tracking after pickup:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If not picked up or no further tracking after pickup:</span> <span class="highlight-bg">Support the merchant</span>.</li>
+                                <li><span class="important-point">b. If picked up and there is further tracking:</span> Proceed to Step 5.</li>
+                                <li><span class="sub-heading">Proof Requirements:</span> The merchant must provide a complete screenshot of the logistics tracking from the official website. The text in the image must be clear and visible, showing no further tracking information other than the creation or pickup of the shipment.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 5: Check whether the latest tracking status shows any issues (e.g., package lost, shipping suspended, or no updates for over 7 calendar days):</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If there are tracking issues:</span> <span class="highlight-bg">Support the merchant</span>.</li>
+                                <li><span class="important-point">b. If tracking is normal and updating:</span> <span class="highlight-bg">Reject the merchant</span>.</li>
+                                <li><span class="sub-heading">Proof Requirements:</span> The merchant must provide a complete screenshot of the official tracking information, with clearly visible and identifiable tracking details. Either of the following conditions must be met:
+                                    <ul class="list-square pl-5">
+                                        <li>The most recent tracking update is more than 7 calendar days old, with no further updates.</li>
+                                        <li>An official notice or statement from the carrier regarding tracking disruption, or a clear screenshot of a confirmed shipping suspension from the official website.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 6: Compare the delivery address with the warehouse address used by the user at the time of return:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If the addresses match or the distance is less than 5 miles (8 km):</span> <span class="highlight-bg">Reject the merchant</span>.</li>
+                                <li><span class="important-point">b. If the distance is greater than 5 miles (8 km):</span> <span class="highlight-bg">Support the merchant</span>.</li>
+                                <li><span class="sub-heading">Proof Requirements:</span>
+                                    <ul class="list-square pl-5">
+                                        <li>The merchant must provide a complete screenshot of the official tracking information. The image must include the final delivery address, which must be clearly visible and show the full detailed address. The tracking number must be included in the image.</li>
+                                        <li>The merchant must provide a screenshot of the after-sales details page clearly showing the warehouse information. The product details in the screenshot must match those in the user's request.</li>
+                                        <li>The merchant must provide a screenshot showing the distance between the delivery address and the warehouse address. The image must clearly show a distance of over 5 miles (8 km). (You may also verify this yourself.) Make sure the addresses match the warehouse address and the return package's delivery address.</li>
+                                    </ul>
+                                </li>
+                                <li><span class="sub-heading">Important Notes on Address Matching:</span>
+                                    <ul class="list-square pl-5">
+                                        <li>If the country, province, and city of the delivery address match the warehouse address, the proof must show the exact building and include the corresponding tracking number. Otherwise, the addresses are considered consistent, and the merchant will be rejected.</li>
+                                        <li>If the country, province, or city differs, you may select "Delivery and warehouse addresses are at least 5 miles (8 km) apart" to support the merchant.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p class="text-gray-700 mb-4 mt-6">The merchant has chosen to provide more proof at a later time</p>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Key Steps:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><span class="sub-heading">Step 1: Compare the tracking number provided by the user with the one submitted by the merchant:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If the tracking numbers match:</span> Proceed to Step 2.</li>
+                                <li><span class="important-point">b. If the tracking numbers do not match:</span> <span class="highlight-bg">Reject the merchant</span>.</li>
+                                <li><span class="sub-heading">Check Point:</span> Check whether the tracking number provided by the merchant on the logistics website matches the return tracking number shown in the Workbench.</li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-heading">Step 2: Check if the tracking information has been updated within the past 7 calendar days at the time the merchant provides proof:</span>
+                            <ul class="list-circle pl-5">
+                                <li><span class="action-point">a. If there is an update:</span> <span class="highlight-bg">Postpone the handling</span>.</li>
+                                <li><span class="important-point">b. If there is no update:</span> <span class="highlight-bg">Reject the merchant's claim</span>.</li>
                             </ul>
                         </li>
                     </ul>
